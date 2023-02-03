@@ -3,6 +3,9 @@ package org.jfree.data.test;
 import static org.junit.Assert.*;
 
 import org.jfree.data.DataUtilities;
+import org.jfree.data.Values2D;
+import org.jmock.Expectations;
+import org.jmock.Mockery;
 import org.junit.Test;
 
 public class DataUtilitiesTest extends DataUtilities 
@@ -23,7 +26,8 @@ public class DataUtilitiesTest extends DataUtilities
 	            will(returnValue(2.5));
 	        }
 	    });
-	    // exercise	double result = DataUtilities.calculateColumnTotal(values, 0);
+	    
+	    double result = DataUtilities.calculateColumnTotal(values, 0);
 	    // verify
 	    assertEquals(result, 10.0, .000000001d);
 	    // tear-down: NONE in this test method
