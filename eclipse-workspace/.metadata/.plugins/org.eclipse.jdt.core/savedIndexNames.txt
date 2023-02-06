@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\Users\dalto\Documents\School\SENG 438\seng438-a2-Racheld3\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-2957281950.index
