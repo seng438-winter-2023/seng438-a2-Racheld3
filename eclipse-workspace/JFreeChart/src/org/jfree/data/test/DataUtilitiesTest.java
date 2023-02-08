@@ -2,6 +2,8 @@ package org.jfree.data.test;
 
 import static org.junit.Assert.*;
 
+import java.security.InvalidParameterException;
+
 import org.jfree.data.DataUtilities;
 import org.jfree.data.Values2D;
 import org.jmock.Expectations;
@@ -74,7 +76,24 @@ public class DataUtilitiesTest extends DataUtilities {
 		
 		// tear-down: NONE in this test method
 	}
+	
+//	@Test(expected = InvalidParameterException.class)
+//	public void testCreateNumberArray2D(){
+//		double[][] testArray;
+//		createNumberArray2D(testArray);
+//	}
+	
+	@Test
+	public void testCreateNumberArray2DPositiveValues() {
+		double[][] testArray = {{5.0, 7.75, 9333.51}, {523.6, 9.999, 2.0}, {11.0, 1234.1234, 72.0}};
+		
+		Number[][] result = createNumberArray2D(testArray);
+		
+		Number[][] expectedResult = {{5.0, 7.75, 9333.51}, {523.6, 9.999, 2.0}, {11.0, 1234.1234, 72.0}};
+		
+		assertArrayEquals(result, expectedResult);
+	}
+	
+	
 
 }
-
-//test test
