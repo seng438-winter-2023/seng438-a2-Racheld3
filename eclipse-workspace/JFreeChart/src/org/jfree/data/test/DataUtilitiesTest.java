@@ -51,11 +51,11 @@ public class DataUtilitiesTest extends DataUtilities {
 	@Test
 	public void createNumberArrayForNominalArray() {
 		//setup
-		double[] testArray = {1.0, 5600.0, 32.009, 4};
+		double[] testArray = {1.0, 5600, 32.009, 4};
 		
 		Number[] result = DataUtilities.createNumberArray(testArray);
 		
-		Number[] expectedResult = {1.0, 5600.0, 32.009, 4};
+		Number[] expectedResult = {1.0, 5600.0, 32.009, 4.0};
 		
 		//verify
 		assertEquals(result, expectedResult);
