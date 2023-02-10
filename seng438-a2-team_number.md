@@ -29,7 +29,7 @@ Additionally, a final sixth test case was created to test a range with a length 
 
 Input partitions:
 
-Data Utilities Methods
+Data Utilities Methods:
 
 1. calculateColumnTotal(Values2D data, int column) 
     a. data with 1+ columns and rows, and the first column of the data
@@ -52,6 +52,11 @@ Data Utilities Methods
     d. data of length > 1
 
 4. createNumberArray2D(double[][] data)
+    a. null data
+    b. empty data
+    c. data with negative values
+    d. data with positive values
+    e. data with positive values in one array, and another empty array
 
 5. getCumulativePercentages(KeyedValues data) 
     a. data table with three positive values
