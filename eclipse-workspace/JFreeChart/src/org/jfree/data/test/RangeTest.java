@@ -10,38 +10,174 @@ import org.junit.Test;
 
 public class RangeTest{
 
-	//getLowerBound tests
+	/**
+	 * getLowerBound() tests
+	 */
 	
 	@Test
-	public void getLowerBoundForValidRange() 
+	public void testGetLowerBoundForLowerBoundPositive() 
 	{
 		//setup
-		final Range testRange = new Range(2, 3);
+		final Range testRange = new Range(185, 2003);
 		double result = testRange.getLowerBound();
-		double expectedResult = 2;
+		double expectedResult = 185;
 		
 		//verify
 		assertEquals(expectedResult, result, .000000001d);
 		
 	}
-	
-	//getUpperBound tests
 	
 	@Test
-	
-	public void getUpperBoundForValidRange() 
+	public void testGetLowerBoundForLowerBoundAboveZero() 
 	{
 		//setup
-		final Range testRange = new Range(2, 3);
-		double result = testRange.getUpperBound();
-		double expectedResult = 3;
+		final Range testRange = new Range(1, 3);
+		double result = testRange.getLowerBound();
+		double expectedResult = 1;
 		
 		//verify
 		assertEquals(expectedResult, result, .000000001d);
 		
 	}
 	
-	//getLength tests
+	@Test
+	public void testGetLowerBoundForLowerBoundZero() 
+	{
+		//setup
+		final Range testRange = new Range(0, 3);
+		double result = testRange.getLowerBound();
+		double expectedResult = 0;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	@Test
+	public void testGetLowerBoundForLowerBoundBelowZero() 
+	{
+		//setup
+		final Range testRange = new Range(-1, 5);
+		double result = testRange.getLowerBound();
+		double expectedResult = -1;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	@Test
+	public void testGetLowerBoundForLowerBoundNegative()
+	{
+		//setup
+		final Range testRange = new Range(-8, 3);
+		double result = testRange.getLowerBound();
+		double expectedResult = -8;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	@Test
+	public void testGetLowerBoundForSameLowerAndUpperBounds() 
+	{
+		//setup
+		final Range testRange = new Range(0, 0);
+		double result = testRange.getLowerBound();
+		double expectedResult = 0;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	/**
+	 * getUpperBound() tests
+	 */
+	
+	@Test
+	public void getUpperBoundForUpperBoundPositive() 
+	{
+		//setup
+		final Range testRange = new Range(89.76, 93.295);
+		double result = testRange.getUpperBound();
+		double expectedResult = 93.295;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	@Test
+	public void getUpperBoundForUpperBoundAboveZero() 
+	{
+		//setup
+		final Range testRange = new Range(-6.01, 0.65);
+		double result = testRange.getUpperBound();
+		double expectedResult = 0.65;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	@Test
+	public void getUpperBoundForUpperBoundZero() 
+	{
+		//setup
+		final Range testRange = new Range(-8, 0);
+		double result = testRange.getUpperBound();
+		double expectedResult = 0;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	@Test
+	public void getUpperBoundForUpperBoundBelowZero() 
+	{
+		//setup
+		final Range testRange = new Range(-4.7, -0.959);
+		double result = testRange.getUpperBound();
+		double expectedResult = -0.959;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	@Test
+	public void getUpperBoundForUpperBoundNegative() 
+	{
+		//setup
+		final Range testRange = new Range(-67, -14);
+		double result = testRange.getUpperBound();
+		double expectedResult = -14;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	@Test
+	public void testGetUpperBoundForSameLowerAndUpperBounds() 
+	{
+		//setup
+		final Range testRange = new Range(0, 0);
+		double result = testRange.getUpperBound();
+		double expectedResult = 0;
+		
+		//verify
+		assertEquals(expectedResult, result, .000000001d);
+		
+	}
+	
+	/**
+	 * getLength() tests
+	 */
+	
 	@Test
 	public void getLengthForValidRange() 
 	{
@@ -53,6 +189,7 @@ public class RangeTest{
 		assertEquals(expectedResult, result, 0.00001);
 	}
 	
+	@Test
 	public void getLengthForZeroLowerPositiveUpper() 
 	{
 		final Range testRange = new Range(0, 10);
@@ -63,6 +200,7 @@ public class RangeTest{
 		assertEquals(expectedResult, result, 0.00001);
 	}
 	
+	@Test
 	public void getLengthForNegativeLowerPositiveUpper() 
 	{
 		final Range testRange = new Range(-5, 10);
@@ -73,6 +211,7 @@ public class RangeTest{
 		assertEquals(expectedResult, result, 0.00001);
 	}
 	
+	@Test
 	public void getLengthForNegativeLowerZeroUpper() 
 	{
 		final Range testRange = new Range(-5, 0);
@@ -83,6 +222,7 @@ public class RangeTest{
 		assertEquals(expectedResult, result, 0.00001);
 	}
 	
+	@Test
 	public void getLengthForNegativeLowerNegativeUpper() 
 	{
 		final Range testRange = new Range(-10, -5);
