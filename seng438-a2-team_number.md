@@ -59,4 +59,4 @@ One of the big difficulties we ran into at first was getting all the members of 
 Our group as well had a different time understanding how to start the mocking. 
 
 # 6 Comments/feedback on the lab itself
-Our group found it diffuclt as mentioned above to understand mocking. We feel as though our group would have benefited with more clear instructions and clarification on how the mocking can be done. 
+Our group found it diffuclt as mentioned above to understand mocking. We feel as though our group would have benefited with more clear instructions and clarification on how the mocking can be done. As well, we feel that we would have benefited if it was made clear that some of our tests would fail no matter what as we were under the impression that there would be no informal or formal bug reports required, as there was supposed to have been no bugs.
