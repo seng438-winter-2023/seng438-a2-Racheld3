@@ -38,4 +38,16 @@ public class RangeTest{
 		assertEquals(expectedResult, result, 0.00001); //dunno how precise it needs to be
 		
 	}
+	
+	//getLength tests
+	@Test
+	public void getLengthForValidRange() 
+	{
+		final Range testRange = new Range(1, 10);
+		double result = testRange.getLength();
+		double expectedResult = 10;
+		
+		//verify
+		assertEquals(expectedResult, result, 0.00001); //dunno how precise it needs to be
+;	}
 }
