@@ -33,10 +33,21 @@ Input partitions for Range:
 
 
 Input partitions for Data Utilities:
-1. calculateColumnTotalForInvalidColumn()
+1. calculateColumnTotal(Values2D data, int column) 
+    a. Positive integer or negative integer values in data, EXPLAIN WHEN ITS VALID(PASS)/INVALID
+    b. Null in 
+    c. 
+
+2. calculateRowTotal(Values2D data, int row) 
     a.
     b.
 
+
+3. createNumberArray(double[] data) 
+
+4. createNumberArray2D(double[][] data)
+
+5. getCumulativePercentages(KeyedValues data) 
 
 
 
@@ -90,14 +101,6 @@ Input partitions for Data Utilities:
 
 
 
-
-
-
-
-
-
-|---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
-
 Text…
 
 // write down the name of the test methods and classes. Organize the based on
@@ -105,7 +108,7 @@ the source code method // they test. identify which tests cover which partitions
 you have explained in the test strategy section //above
 
 # 4 How the team work/effort was divided and managed
-After reading the lab handout and confirming that everyone had a general understanding of how the program works, expected unit testing, and mock testing, we split the tests up between the group members. All team members did help eachother through on zoom.
+After reading the lab handout and confirming that everyone had a general understanding of how the program works, expected unit testing, and mock testing, we split the tests up between the group members. All team members did help eachother through on zoom. 
 
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
@@ -114,4 +117,5 @@ One of the big difficulties we ran into at first was getting all the members of 
 Our group as well had a different time understanding how to start the mocking. 
 
 # 6 Comments/feedback on the lab itself
-Our group found it diffuclt as mentioned above to understand mocking. We feel as though our group would have benefited with more clear instructions and clarification on how the mocking can be done. As well, we feel that we would have benefited if it was made clear that some of our tests would fail no matter what as we were under the impression that there would be no informal or formal bug reports required, as there was supposed to have been no bugs.
+Our group found it diffuclt as mentioned above to understand mocking. We feel as though our group would have benefited with more clear instructions and clarification on how the mocking can be done. As well, we feel that we would have benefited if it was made clear that some of our tests would fail no matter what as we were under the impression that there would be no bugs to be found in the code.
+After some of the challenges we faced were overcome, this lab did help us in gaining a strong understanding of how to write effective unit tests to help determine bugs. As well as how using mocking objects are used in unit tests.
