@@ -232,6 +232,17 @@ public class RangeTest{
 		//verify
 		assertEquals(expectedResult, result, 0.00001);
 	}
+	
+	@Test
+	public void getLengthForIdenticalLowerUpper() 
+	{
+		final Range testRange = new Range(1, 1);
+		double result = testRange.getLength();
+		double expectedResult = 0;
+		
+		//verify
+		assertEquals(expectedResult, result, 0.00001);
+	}
 
 	/**
 	 * Tests for getCentralValue()
