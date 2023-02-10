@@ -219,77 +219,39 @@ public class DataUtilitiesTest extends DataUtilities {
 				allowing(inputValues).getItemCount();
 				will(returnValue(3));
 				
-				//test
-//				allowing(inputValues).getKey(0);
-//				will(returnValue(0));
-//				
-//				allowing(inputValues).getKey(1);
-//				will(returnValue(0));
-//				
-//				allowing(inputValues).getKey(2);
-//				will(returnValue(0));
-				
-				//value of 5 giving key 0
-				allowing(inputValues).getKey(5);
+				allowing(inputValues).getKey(0);
 				will(returnValue(0));
+				
+				allowing(inputValues).getKey(1);
+				will(returnValue(1));
+				
+				allowing(inputValues).getKey(2);
+				will(returnValue(2));
+				
 				
 				//key of 0 giving value 5
 				allowing(inputValues).getValue(0);
-				will(returnValue(5));
-				
-				//value of 9 giving key 1
-//				one(inputValues).getKey(9);
-//				will(returnValue(1));
+				will(returnValue(5.0));
 				
 				//key of 1 giving value 9
 				allowing(inputValues).getValue(1);
-				will(returnValue(9));
+				will(returnValue(9.0));
 			
 				//value of 2 giving key 2
 				allowing(inputValues).getValue(2);
-				will(returnValue(2));
+				will(returnValue(2.0));
 				
-				//key of 2 giving value 2
-//				one(inputValues).getKey(2);
-//				will(returnValue(2));
 				
 			}	
 		});
-		Mockery mockingContext1 = new Mockery();
-		final KeyedValues expectedValues = mockingContext1.mock(KeyedValues.class);
-		mockingContext1.checking(new Expectations() {
-			{
-				allowing(expectedValues).getItemCount();
-				will(returnValue(3));
-				
-				//value of 5/16 giving key 0
-				allowing(expectedValues).getKey(5/16);
-				will(returnValue(0));
-				
-				//key of 0 giving value 5/16
-				allowing(expectedValues).getValue(0);
-				will(returnValue(5/16));
-				
-				//value of 14/16 giving key 1
-				allowing(expectedValues).getKey(14/16);
-				will(returnValue(1));
-				
-				//key of 1 giving value 14/16
-				allowing(expectedValues).getValue(1);
-				will(returnValue(14/16));
-				
-				//value of 16/16 giving key 2
-				allowing(expectedValues).getKey(16/16);
-				will(returnValue(2));
-				
-				//key of 2 giving value 16/16
-				allowing(expectedValues).getValue(2);
-				will(returnValue(16/16));
-				
-			}
-		});
+		
+		Number expectedResult[] = {5.0/16.0, 14.0/16.0, 16.0/16.0};
+		
 		KeyedValues result = DataUtilities.getCumulativePercentages(inputValues);
-		assertEquals(expectedValues, result);
+
+		Number actualResult[] = {result.getValue(0), result.getValue(1), result.getValue(2)};
+		
+		assertEquals(expectedResult, actualResult);
 		
 	}
 }
