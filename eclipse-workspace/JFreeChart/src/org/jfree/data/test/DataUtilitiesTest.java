@@ -102,14 +102,32 @@ public class DataUtilitiesTest extends DataUtilities {
 		final KeyedValues inputValues = mockingContext.mock(KeyedValues.class);
 		mockingContext.checking(new Expectations() {
 			{
-				one(inputValues).getItemCount();
+				allowing(inputValues).getItemCount();
 				will(returnValue(3));
-				one(inputValues).getKey(0);
+				
+				//value of 5 giving key 0
+				one(inputValues).getKey(5);
+				will(returnValue(0));
+				
+				//key of 0 giving value 5
+				one(inputValues).getValue(0);
 				will(returnValue(5));
-				one(inputValues).getKey(1);
+				
+				//value of 9 giving key 1
+//				one(inputValues).getKey(9);
+//				will(returnValue(1));
+				
+				//key of 1 giving value 9
+				one(inputValues).getValue(1);
 				will(returnValue(9));
-				one(inputValues).getKey(2);
-				will(returnValue(3));
+			
+				//value of 2 giving key 2
+				one(inputValues).getValue(2);
+				will(returnValue(2));
+				
+				//key of 2 giving value 2
+//				one(inputValues).getKey(2);
+//				will(returnValue(2));
 				
 			}	
 		});
@@ -117,13 +135,31 @@ public class DataUtilitiesTest extends DataUtilities {
 		final KeyedValues expectedValues = mockingContext1.mock(KeyedValues.class);
 		mockingContext1.checking(new Expectations() {
 			{
-				one(expectedValues).getItemCount();
+				allowing(expectedValues).getItemCount();
 				will(returnValue(3));
-				one(expectedValues).getKey(0);
+				
+				//value of 5/16 giving key 0
+				one(inputValues).getKey(5/16);
+				will(returnValue(0));
+				
+				//key of 0 giving value 5/16
+				one(expectedValues).getValue(0);
 				will(returnValue(5/16));
-				one(expectedValues).getKey(1);
+				
+				//value of 14/16 giving key 1
+				one(inputValues).getKey(14/16);
+				will(returnValue(1));
+				
+				//key of 1 giving value 14/16
+				one(expectedValues).getValue(1);
 				will(returnValue(14/16));
-				one(expectedValues).getKey(2);
+				
+				//value of 16/16 giving key 2
+				one(inputValues).getKey(16/16);
+				will(returnValue(2));
+				
+				//key of 2 giving value 16/16
+				one(expectedValues).getValue(2);
 				will(returnValue(16/16));
 				
 			}
