@@ -27,10 +27,16 @@ An example of the following could be seen when partitioning inputs for testing R
     3. Negative valued lower bound and positive valued upper bound
     4. Negative valued lower bound and zero upper bound
     5. Negative valued lower bound and negative valued upper bound
-
 Additionally, a final sixth test case was created to test a range with a length of zero (ie, lower bound value = upper bound value).
 
-Input partitions:
+Input partitions for Range:
+
+
+
+Input partitions for Data Utilities:
+1. calculateColumnTotalForInvalidColumn()
+    a.
+    b.
 
 
 
