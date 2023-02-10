@@ -65,8 +65,9 @@ Range Methods:
 
 6. getLowerBound()
     a. a range with positive values for both the lowet and upper bounds
-    b. a range with negative value for lower bound, and a positive value for the upper bound
-    c. a range with zero for the value for the lower bound, and a positive value for the upper bound
+    b. a range with zero for the value for the lower bound, and a positive value for the upper bound
+    c. a range with negative value for lower bound, and a positive value for the upper bound
+    d. a range with the lower and upper bounds being the same values
 
 7. getLength()
     a. a range with positive numbers for both the lower and upper bounds, therefore, valid range
@@ -128,12 +129,12 @@ Range Methods:
 | DataUtilties  | getCumulativePercentages() | 5.c                 | getCumulativePercentagesTestForException()                    | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.d                 | getCumulativePercentagesTestForNegativeValue()                | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.e                 | getCumulativePercentagesTestForOneNegativeValue()             | Fail        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundPositive()                      | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundAboveZero()                     | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundZero()                          | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundBelowZero()                     | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundNegative()                      | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForSameLowerAndUpperBounds()                 | Pass        |
+| Range         | getLowerBound()            | 6.a                 | testGetLowerBoundForLowerBoundPositive()                      | Pass        |
+| Range         | getLowerBound()            | 6.a                 | testGetLowerBoundForLowerBoundAboveZero()                     | Pass        |
+| Range         | getLowerBound()            | 6.b                 | testGetLowerBoundForLowerBoundZero()                          | Pass        |
+| Range         | getLowerBound()            | 6.c                 | testGetLowerBoundForLowerBoundBelowZero()                     | Pass        |
+| Range         | getLowerBound()            | 6.c                 | testGetLowerBoundForLowerBoundNegative()                      | Pass        |
+| Range         | getLowerBound()            | 6.d                 | testGetLowerBoundForSameLowerAndUpperBounds()                 | Pass        |
 | Range         | getLength()                | 7.a                 | getLengthForNegativeLowerNegativeUpper()                      | Pass        |
 | Range         | getLength()                | 7.b                 | getLengthForNegativeLowerPositiveUpper()                      | Pass        |
 | Range         | getLength()                | 7.c                 | getLengthForNegativeLowerZeroUpper()                          | Pass        |
