@@ -146,12 +146,6 @@ Input partitions for Data Utilities methods:
 
 
 
-Text…
-
-// write down the name of the test methods and classes. Organize the based on
-the source code method // they test. identify which tests cover which partitions
-you have explained in the test strategy section //above
-
 # 4 How the team work/effort was divided and managed
 After reading the lab handout and confirming that everyone had a general understanding of how the program works, expected unit testing, and mock testing, we split the tests up between the group members. All team members did help eachother through on zoom. 
 
