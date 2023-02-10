@@ -21,11 +21,12 @@ public class RangeTest{
 		double expectedResult = 2;
 		
 		//verify
-		assertEquals(expectedResult, result, 0.00001); //dunno how precise it needs to be
+		assertEquals(expectedResult, result, .000000001d);
 		
 	}
 	
 	//getUpperBound tests
+	
 	@Test
 	public void getUpperBoundForValidRange() 
 	{
@@ -35,7 +36,7 @@ public class RangeTest{
 		double expectedResult = 3;
 		
 		//verify
-		assertEquals(expectedResult, result, 0.00001); //dunno how precise it needs to be
+		assertEquals(expectedResult, result, .000000001d);
 		
 	}
 }
