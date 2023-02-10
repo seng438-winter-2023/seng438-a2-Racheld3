@@ -220,14 +220,14 @@ public class DataUtilitiesTest extends DataUtilities {
 				will(returnValue(3));
 				
 				//test
-				allowing(inputValues).getKey(0);
-				will(returnValue(0));
-				
-				allowing(inputValues).getKey(1);
-				will(returnValue(0));
-				
-				allowing(inputValues).getKey(2);
-				will(returnValue(0));
+//				allowing(inputValues).getKey(0);
+//				will(returnValue(0));
+//				
+//				allowing(inputValues).getKey(1);
+//				will(returnValue(0));
+//				
+//				allowing(inputValues).getKey(2);
+//				will(returnValue(0));
 				
 				//value of 5 giving key 0
 				allowing(inputValues).getKey(5);
@@ -263,7 +263,7 @@ public class DataUtilitiesTest extends DataUtilities {
 				will(returnValue(3));
 				
 				//value of 5/16 giving key 0
-				allowing(inputValues).getKey(5/16);
+				allowing(expectedValues).getKey(5/16);
 				will(returnValue(0));
 				
 				//key of 0 giving value 5/16
@@ -271,7 +271,7 @@ public class DataUtilitiesTest extends DataUtilities {
 				will(returnValue(5/16));
 				
 				//value of 14/16 giving key 1
-				allowing(inputValues).getKey(14/16);
+				allowing(expectedValues).getKey(14/16);
 				will(returnValue(1));
 				
 				//key of 1 giving value 14/16
@@ -279,7 +279,7 @@ public class DataUtilitiesTest extends DataUtilities {
 				will(returnValue(14/16));
 				
 				//value of 16/16 giving key 2
-				allowing(inputValues).getKey(16/16);
+				allowing(expectedValues).getKey(16/16);
 				will(returnValue(2));
 				
 				//key of 2 giving value 16/16
