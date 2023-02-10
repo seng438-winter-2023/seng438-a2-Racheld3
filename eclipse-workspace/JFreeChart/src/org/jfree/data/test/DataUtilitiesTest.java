@@ -82,6 +82,44 @@ public class DataUtilitiesTest extends DataUtilities {
 	    // tear-down: NONE in this test method
 	}
 	
+	@Test
+	public void calculateColumnTotalForNoValues()
+	{
+	    // setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getRowCount();
+	            will(returnValue(0));    
+	        }
+	    });
+	    double result = DataUtilities.calculateColumnTotal(values, 0);
+	    // verify
+	    assertEquals(0, result, .000000001d);
+	    // tear-down: NONE in this test method
+	}
+	
+	@Test
+	public void calculateColumnTotalForInvalidColumn()
+	{
+	    // setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getRowCount();
+	            will(returnValue(1)); 
+	            one(values).getValue(0, -1);
+	            will(returnValue(0));
+	        }
+	    });
+	    double result = DataUtilities.calculateColumnTotal(values, -1);
+	    // verify
+	    assertEquals(0, result, .000000001d);
+	    // tear-down: NONE in this test method
+	}
+	
 	//calculateRowTotal(Values2D, int)
 	
 	@Test
@@ -147,6 +185,43 @@ public class DataUtilitiesTest extends DataUtilities {
 	    // tear-down: NONE in this test method
 	}
 	
+	@Test
+	public void calculateRowTotalForNoValues()
+	{
+	    // setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getColumnCount();
+	            will(returnValue(0));    
+	        }
+	    });
+	    double result = DataUtilities.calculateRowTotal(values, 0);
+	    // verify
+	    assertEquals(0, result, .000000001d);
+	    // tear-down: NONE in this test method
+	}
+	
+	@Test
+	public void calculateRowTotalForInvalidColumn()
+	{
+	    // setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getColumnCount();
+	            will(returnValue(1)); 
+	            one(values).getValue(-1, 0);
+	            will(returnValue(0));
+	        }
+	    });
+	    double result = DataUtilities.calculateRowTotal(values, -1);
+	    // verify
+	    assertEquals(0, result, .000000001d);
+	    // tear-down: NONE in this test method
+	}
 	
 	//CreateNumberArray(double[]) tests
 	
@@ -179,18 +254,7 @@ public class DataUtilitiesTest extends DataUtilities {
 		
 		// tear-down: NONE in this test method
 	}
-	
-	@Test
-	public void createNumberArrayForNullArray() {
-		//setup
-		double[] testArray = null;
-		
-		//test
-		//verify
-		//assertThrows(DataUtilites.class, () -> {DataUtilities.createNumberArray(testArray); });
-		
-		// tear-down: NONE in this test method
-	}
+
 	
 	@Test(expected = InvalidParameterException.class)
 	public void testCreateNumberArray2D(){
@@ -245,8 +309,9 @@ public class DataUtilitiesTest extends DataUtilities {
 	}
 	
 	//tests for getCumulative Percentages
+	
 	@Test
-	public void getCumulativePercentagesTest() {
+	public void getCumulativePercentagesTestForValidValues() {
 		Mockery mockingContext = new Mockery();
 		final KeyedValues inputValues = mockingContext.mock(KeyedValues.class);
 		mockingContext.checking(new Expectations() {
@@ -285,6 +350,123 @@ public class DataUtilitiesTest extends DataUtilities {
 		KeyedValues result = DataUtilities.getCumulativePercentages(inputValues);
 
 		Number actualResult[] = {result.getValue(0), result.getValue(1), result.getValue(2)};
+		
+		assertEquals(expectedResult, actualResult);
+		
+	}
+	
+	//looks like method is not taking into account the first value in the table when calculating the sum, 
+	//therefore, the sum becomes 11, and so the percentages are thrown off in the results. For example instead
+	//of 5/16 = 0.3125 it is 5/11 = 0.4545.
+	
+	//so testing with only one value in the table that is not accounted for in the sum calculation
+	//should result in a division by 0 = infinity
+	
+	@Test
+	public void getCumulativePercentagesTestForOneValue() {
+		Mockery mockingContext = new Mockery();
+		final KeyedValues inputValues = mockingContext.mock(KeyedValues.class);
+		mockingContext.checking(new Expectations() {
+			{
+				allowing(inputValues).getItemCount();
+				will(returnValue(1));
+				
+				allowing(inputValues).getKey(0);
+				will(returnValue(0));
+							
+				
+				//key of 0 giving value 5
+				allowing(inputValues).getValue(0);
+				will(returnValue(5.0));
+				
+			}	
+		});
+		
+		Number expectedResult[] = {5.0/5.0};
+		
+		KeyedValues result = DataUtilities.getCumulativePercentages(inputValues);
+
+		Number actualResult[] = {result.getValue(0)};
+		
+		assertEquals(expectedResult, actualResult);
+		
+	}
+	
+	@Test(expected = InvalidParameterException.class)
+	public void getCumulativePercentagesTestForException(){
+		getCumulativePercentages(null);
+	}
+	
+	@Test
+	public void getCumulativePercentagesTestForNegativeValue() {
+		Mockery mockingContext = new Mockery();
+		final KeyedValues inputValues = mockingContext.mock(KeyedValues.class);
+		mockingContext.checking(new Expectations() {
+			{
+				allowing(inputValues).getItemCount();
+				will(returnValue(3));
+				
+				allowing(inputValues).getKey(0);
+				will(returnValue(0));
+				
+				allowing(inputValues).getKey(1);
+				will(returnValue(1));
+				
+				allowing(inputValues).getKey(2);
+				will(returnValue(2));
+				
+				
+				//key of 0 giving value 5
+				allowing(inputValues).getValue(0);
+				will(returnValue(5.0));
+				
+				//key of 1 giving value 9
+				allowing(inputValues).getValue(1);
+				will(returnValue(9.0));
+			
+				//value of -2 giving key 2
+				allowing(inputValues).getValue(2);
+				will(returnValue(-2.0));
+				
+				
+			}	
+		});
+		
+		Number expectedResult[] = {5.0/12.0, 14.0/12.0, 12.0/12.0};
+		
+		KeyedValues result = DataUtilities.getCumulativePercentages(inputValues);
+
+		Number actualResult[] = {result.getValue(0), result.getValue(1), result.getValue(2)};
+		
+		assertEquals(expectedResult, actualResult);
+		
+	}
+	
+	@Test
+	public void getCumulativePercentagesTestForOneNegativeValue() {
+		Mockery mockingContext = new Mockery();
+		final KeyedValues inputValues = mockingContext.mock(KeyedValues.class);
+		mockingContext.checking(new Expectations() {
+			{
+				allowing(inputValues).getItemCount();
+				will(returnValue(1));
+				
+				allowing(inputValues).getKey(0);
+				will(returnValue(0));
+							
+				
+				//key of 0 giving value -5
+				allowing(inputValues).getValue(0);
+				will(returnValue(-5.0));
+				
+			}	
+		});
+		
+		Number expectedResult[] = {-5.0/-5.0};
+		
+		KeyedValues result = DataUtilities.getCumulativePercentages(inputValues);
+
+		Number actualResult[] = {result.getValue(0)};
 		
 		assertEquals(expectedResult, actualResult);
 		
