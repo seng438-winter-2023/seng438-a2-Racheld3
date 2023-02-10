@@ -220,14 +220,14 @@ public class DataUtilitiesTest extends DataUtilities {
 				will(returnValue(3));
 				
 				//test
-//				allowing(inputValues).getKey(0);
-//				will(returnValue(0));
-//				
-//				allowing(inputValues).getKey(1);
-//				will(returnValue(0));
-//				
-//				allowing(inputValues).getKey(2);
-//				will(returnValue(0));
+				allowing(inputValues).getKey(0);
+				will(returnValue(0));
+				
+				allowing(inputValues).getKey(1);
+				will(returnValue(0));
+				
+				allowing(inputValues).getKey(2);
+				will(returnValue(0));
 				
 				//value of 5 giving key 0
 				allowing(inputValues).getKey(5);
