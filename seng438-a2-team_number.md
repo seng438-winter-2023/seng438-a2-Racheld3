@@ -29,7 +29,7 @@ Additionally, a final sixth test case was created to test a range with a length 
 
 Input partitions:
 
-Data Utilities Methods
+Data Utilities Methods:
 
 1. calculateColumnTotal(Values2D data, int column) 
     a. data with 1+ columns and rows, and the first column of the data
