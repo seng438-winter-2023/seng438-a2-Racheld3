@@ -76,6 +76,10 @@ Input partitions for Data Utilities methods:
 
 
 3. createNumberArray(double[] data) 
+    a. null data
+    b. empty data
+    c. data of length one
+    d. data of length > 1
 
 4. createNumberArray2D(double[][] data)
 
@@ -98,10 +102,10 @@ Input partitions for Data Utilities methods:
 | DataUtilties  | calculateRowTotal()        |         2.c         | calculateRowTotalForOneValue()                                | Fail        |
 | DataUtilties  | calculateRowTotal()        |         2.b         | calculateRowTotalForThreeValuesLastRow()                      | Fail        | 
 | DataUtilties  | calculateRowTotal()        |         2.a         | calculateRowTotalForTwoValuesFirstRow()                       | Fail        |
-| DataUtilties  | createNumberArray()        |                     | createNumberArrayForArrayOfLengthOne()                        | Fail        | 
-| DataUtilties  | createNumberArray()        |                     | createNumberArrayForEmptyArray()                              | Pass        |
-| DataUtilties  | createNumberArray()        |                     | createNumberArrayForNominalArray()                            | Fail        | 
-| DataUtilties  | createNumberArray()        |                     | testCreateNumberArrayWithNullInput()                          | Fail        |
+| DataUtilties  | createNumberArray()        |         3.c         | createNumberArrayForArrayOfLengthOne()                        | Fail        | 
+| DataUtilties  | createNumberArray()        |         3.b         | createNumberArrayForEmptyArray()                              | Pass        |
+| DataUtilties  | createNumberArray()        |         3.d         | createNumberArrayForNominalArray()                            | Fail        | 
+| DataUtilties  | createNumberArray()        |         3.a         | testCreateNumberArrayWithNullInput()                          | Fail        |
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2D()                                     | Fail        |
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DEmptyArray()                           | Pass        | 
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DNegativeValuesOneArray()               | Fail        | 
