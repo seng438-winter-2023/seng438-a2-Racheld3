@@ -55,6 +55,8 @@ Input partitions for five chosen Range methods:
 
 
 4. getLowerBound()
+    a. a range with positive values for both
+    b. a range with the value of 0
 
 5. getUpperBound()
 
@@ -75,7 +77,6 @@ Input partitions for Data Utilities methods:
     c. data with 1 column and row, and the only row of the data
     d. data with no columns, and requesting the first row
     e. data with 1 column and row, and requesting a negative row
-
 
 3. createNumberArray(double[] data) 
     a. null data
@@ -157,14 +158,8 @@ Input partitions for Data Utilities methods:
 
 
 
-Text…
-
-// write down the name of the test methods and classes. Organize the based on
-the source code method // they test. identify which tests cover which partitions
-you have explained in the test strategy section //above
-
 # 4 How the team work/effort was divided and managed
-After reading the lab handout and confirming that everyone had a general understanding of how the program works, expected unit testing, and mock testing, we split the tests up between the group members. All team members did help eachother through on zoom. 
+After reading the lab handout and confirming that everyone had a general understanding of how the program works, expected unit testing, and mock testing, we split the tests up between the group members. Methods that would require the use of Mocking were divided between members of the group, so we could all learn and practice the technique. After deciding which members would examine and test each of the methods to be tested, the remaining work was performed alone. Each member would perform a combination of ECT and BVT on each of the methods assigned to them. This would involve finding the acceptable domain of each method and identifying equivalence classes. During the initial portions of writing tests that involve mocking, group members worked together on a zoom call to understand mocking interfaces.
 
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
