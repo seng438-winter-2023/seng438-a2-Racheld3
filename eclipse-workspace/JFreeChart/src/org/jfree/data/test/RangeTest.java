@@ -50,7 +50,47 @@ public class RangeTest{
 		double expectedResult = 10;
 		
 		//verify
-		assertEquals(expectedResult, result, 0.00001); //dunno how precise it needs to be
+		assertEquals(expectedResult, result, 0.00001);
+	}
+	
+	public void getLengthForZeroLowerPositiveUpper() 
+	{
+		final Range testRange = new Range(0, 10);
+		double result = testRange.getLength();
+		double expectedResult = 10;
+		
+		//verify
+		assertEquals(expectedResult, result, 0.00001);
+	}
+	
+	public void getLengthForNegativeLowerPositiveUpper() 
+	{
+		final Range testRange = new Range(-5, 10);
+		double result = testRange.getLength();
+		double expectedResult = 15;
+		
+		//verify
+		assertEquals(expectedResult, result, 0.00001);
+	}
+	
+	public void getLengthForNegativeLowerZeroUpper() 
+	{
+		final Range testRange = new Range(-5, 0);
+		double result = testRange.getLength();
+		double expectedResult = 5;
+		
+		//verify
+		assertEquals(expectedResult, result, 0.00001);
+	}
+	
+	public void getLengthForNegativeLowerNegativeUpper() 
+	{
+		final Range testRange = new Range(-10, -5);
+		double result = testRange.getLength();
+		double expectedResult = 5;
+		
+		//verify
+		assertEquals(expectedResult, result, 0.00001);
 	}
 
 	/**
