@@ -225,6 +225,13 @@ public class DataUtilitiesTest extends DataUtilities {
 	
 	//CreateNumberArray(double[]) tests
 	
+	@Test(expected = InvalidParameterException.class)
+	public void testCreateNumberArrayWithNullInput(){
+		double[] testArray = null;
+		createNumberArray(testArray);
+	}
+	
+	
 	@Test
 	public void createNumberArrayForEmptyArray() {
 		//setup
@@ -236,6 +243,21 @@ public class DataUtilitiesTest extends DataUtilities {
 		
 		//verify
 		assertEquals(result, expectedResult);
+		
+		// tear-down: NONE in this test method
+	}
+	
+	@Test
+	public void createNumberArrayForArrayOfLengthOne() {
+		//setup
+		double[] testArray = {-98};
+		
+		Number[] result = DataUtilities.createNumberArray(testArray);
+		
+		Number[] expectedResult = {-98.0};
+		
+		//verify
+		assertEquals(expectedResult, result);
 		
 		// tear-down: NONE in this test method
 	}
@@ -255,6 +277,8 @@ public class DataUtilitiesTest extends DataUtilities {
 		// tear-down: NONE in this test method
 	}
 
+	
+	//CreateNumberArray2D tests
 	
 	@Test(expected = InvalidParameterException.class)
 	public void testCreateNumberArray2D(){
