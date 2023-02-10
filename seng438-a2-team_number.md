@@ -93,24 +93,21 @@ Input partitions for Data Utilities methods:
 | DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForOneValue()                                | Fail        |
 | DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForThreeValuesLastRow()                      | Fail        | 
 | DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForTwoValuesFirstRow()                       | Fail        |
-| DataUtilties  | createNumberArray()        |
-| DataUtilties  | createNumberArray()        |
-| DataUtilties  | createNumberArray()        |
-| DataUtilties  | createNumberArray()        |
-| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |                     | createNumberArrayForArrayOfLengthOne()                        | Fail        | 
+| DataUtilties  | createNumberArray()        |                     | createNumberArrayForEmptyArray()                              | Pass        |
+| DataUtilties  | createNumberArray()        |                     | createNumberArrayForNominalArray()                            | Fail        | 
+| DataUtilties  | createNumberArray()        |                     | testCreateNumberArrayWithNullInput()                          | Fail        |
+| DataUtilties  | createNumberArray2D()      |                     | 
 | DataUtilties  | createNumberArray2D()      |
 | DataUtilties  | createNumberArray2D()      |
 | DataUtilties  | createNumberArray2D()      |
 | DataUtilties  | createNumberArray2D()      |
-| DataUtilties  | createNumberArray2D()      |
-
 
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForValidValues()                  | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneValue()                     | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForException()                    | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForNegativeValue()                | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneNegativeValue()             | Fail        |
-|---------------| ---------------------------|---------------------|---------------------------------------------------            |-------------|
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundPositive()                      | Pass        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundAboveZero()                     | Pass        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundZero()                          | Pass        |
@@ -142,8 +139,6 @@ Input partitions for Data Utilities methods:
 | Range         | contains()                 | 1e                  | testContainsAboveLowerBoundOfRange()                          | Pass        |
 | Range         | contains()                 | 1f                  | testContainsAtLowerBoundOfRange()                             | Pass        |
 | Range         | contains()                 | 1g                  | testContainsBelowLowerBoundOfRange()                          | Pass        |
-
-
 
 
 
