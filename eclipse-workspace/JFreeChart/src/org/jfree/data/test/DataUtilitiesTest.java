@@ -242,7 +242,7 @@ public class DataUtilitiesTest extends DataUtilities {
 		Number[] expectedResult = {};
 		
 		//verify
-		assertEquals(result, expectedResult);
+		assertArrayEquals(result, expectedResult);
 		
 		// tear-down: NONE in this test method
 	}
@@ -257,7 +257,7 @@ public class DataUtilitiesTest extends DataUtilities {
 		Number[] expectedResult = {-98.0};
 		
 		//verify
-		assertEquals(expectedResult, result);
+		assertArrayEquals(expectedResult, result);
 		
 		// tear-down: NONE in this test method
 	}
@@ -272,7 +272,7 @@ public class DataUtilitiesTest extends DataUtilities {
 		Number[] expectedResult = {1.0, 5600.0, -32.009, 4.0};
 		
 		//verify
-		assertEquals(expectedResult, result);
+		assertArrayEquals(expectedResult, result);
 		
 		// tear-down: NONE in this test method
 	}
@@ -375,7 +375,7 @@ public class DataUtilitiesTest extends DataUtilities {
 
 		Number actualResult[] = {result.getValue(0), result.getValue(1), result.getValue(2)};
 		
-		assertEquals(expectedResult, actualResult);
+		assertArrayEquals(expectedResult, actualResult);
 		
 	}
 	
@@ -412,7 +412,7 @@ public class DataUtilitiesTest extends DataUtilities {
 
 		Number actualResult[] = {result.getValue(0)};
 		
-		assertEquals(expectedResult, actualResult);
+		assertArrayEquals(expectedResult, actualResult);
 		
 	}
 	
@@ -462,7 +462,7 @@ public class DataUtilitiesTest extends DataUtilities {
 
 		Number actualResult[] = {result.getValue(0), result.getValue(1), result.getValue(2)};
 		
-		assertEquals(expectedResult, actualResult);
+		assertArrayEquals(expectedResult, actualResult);
 		
 	}
 	
@@ -492,7 +492,7 @@ public class DataUtilitiesTest extends DataUtilities {
 
 		Number actualResult[] = {result.getValue(0)};
 		
-		assertEquals(expectedResult, actualResult);
+		assertArrayEquals(expectedResult, actualResult);
 		
 	}
 }
