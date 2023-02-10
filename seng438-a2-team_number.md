@@ -31,12 +31,12 @@ Input partitions:
 
 Data Utilities Methods:
 
-1. calculateColumnTotal(Values2D data, int column) 
-    a. data with 1+ columns and rows, and the first column of the data
-    b. data with 1+ columns and rows, and the last column of the data
-    c. data with 1 column and row, and the only column of the data
-    d. data with no columns, and requesting the first column
-    e. data with 1 column and row, and requesting a negative column
+1. calculateColumnTotal(Values2D data, int column) \n
+    a. data with 1+ columns and rows, and the first column of the data \n
+    b. data with 1+ columns and rows, and the last column of the data \n
+    c. data with 1 column and row, and the only column of the data \n
+    d. data with no columns, and requesting the first column \n
+    e. data with 1 column and row, and requesting a negative column \n
 
 2. calculateRowTotal(Values2D data, int row) 
     a. data with 1+ columns and rows, and the first row of the data
