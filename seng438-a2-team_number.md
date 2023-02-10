@@ -47,12 +47,14 @@ Input partitions for five chosen Range methods:
     f. a range with length zero
 
 3. getLength()
-    a. a range with positive numbers, is valid
+    a. a range with positive values, is valid
     b. 
     c. 
 
 
 4. getLowerBound()
+    a. a range with positive values for both
+    b. a range with the value of 0
 
 5. getUpperBound()
 
@@ -73,7 +75,6 @@ Input partitions for Data Utilities methods:
     c. data with 1 column and row, and the only row of the data
     d. data with no columns, and requesting the first row
     e. data with 1 column and row, and requesting a negative row
-
 
 3. createNumberArray(double[] data) 
     a. null data
