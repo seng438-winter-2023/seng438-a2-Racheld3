@@ -10,7 +10,7 @@
 | Student 4: Isaiah Lemieux            |
 
 # 1 Introduction
-In this lab our group was able to apply the different concepts and practices we covered in lectures. We had to use both Junit, Javadoc, and Eclipse to test the given system JFreeChart. Junit was used to create a testing environment which used mock testing and test cases. We were able to demonstrate the creation of unit tests and using mock objects within our unit test code.
+In this lab our group was able to review and apply the different concepts and practices we covered in lectures. Our goal was to learn the basics of automated unit testing based on the requirements of different methods of the system to be tested JFreeChart and its necessary libraries. We had to use Junit, the Java documentation for the system, and Eclipse to test this given system. Junit was used to create a testing environment which used mock testing and test cases. We were then able to demonstrate the creation of unit tests and using mock objects within our unit test code.
 
 # 2 Detailed description of unit test strategy
 
