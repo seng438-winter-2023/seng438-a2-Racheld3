@@ -30,9 +30,21 @@ Additionally, a final sixth test case was created to test a range with a length 
 
 Input partitions for five chosen Range methods:
 1. contains(double value)
-
+    a. any range of values (any value for each lower bound and upper bound), method input variable slightly greater than upper bound
+    b. any range of values, method input variable at upper bound
+    c. any range of values, method input variable slightly less than upper bound
+    d. any range of values, method input variable between upper bound and lower bound
+    e. any range of values, method input variable slightly greater than lower bound
+    f. any range of values, method input variable at lower bound
+    g. any range of values, method input variable slightly less than lower bound
 
 2. getCentralValue()
+    a. a range with positive value for lower bound, and a positive value for upper bound
+    b. a range with lower bound of zero, and a positive value for upper bound
+    c. a range with negative value for lower bound, and a positive value for upper bound
+    d. a range with negative value for lower bound, and upper bound of zero
+    e. a range with negative value for lower bound, and a negative value for upper bound
+    f. a range with length zero
 
 3. getLength()
     a. a range with positive numbers, is valid
@@ -81,24 +93,21 @@ Input partitions for Data Utilities methods:
 | DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForOneValue()                                | Fail        |
 | DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForThreeValuesLastRow()                      | Fail        | 
 | DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForTwoValuesFirstRow()                       | Fail        |
-| DataUtilties  | createNumberArray()        |
-| DataUtilties  | createNumberArray()        |
-| DataUtilties  | createNumberArray()        |
-| DataUtilties  | createNumberArray()        |
-| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |                     | createNumberArrayForArrayOfLengthOne()                        | Fail        | 
+| DataUtilties  | createNumberArray()        |                     | createNumberArrayForEmptyArray()                              | Pass        |
+| DataUtilties  | createNumberArray()        |                     | createNumberArrayForNominalArray()                            | Fail        | 
+| DataUtilties  | createNumberArray()        |                     | testCreateNumberArrayWithNullInput()                          | Fail        |
+| DataUtilties  | createNumberArray2D()      |                     | 
 | DataUtilties  | createNumberArray2D()      |
 | DataUtilties  | createNumberArray2D()      |
 | DataUtilties  | createNumberArray2D()      |
 | DataUtilties  | createNumberArray2D()      |
-| DataUtilties  | createNumberArray2D()      |
-
 
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForValidValues()                  | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneValue()                     | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForException()                    | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForNegativeValue()                | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneNegativeValue()             | Fail        |
-|---------------| ---------------------------|---------------------|---------------------------------------------------            |-------------|
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundPositive()                      | Pass        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundAboveZero()                     | Pass        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundZero()                          | Pass        |
@@ -117,21 +126,19 @@ Input partitions for Data Utilities methods:
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundPositive()                          | Fail        |
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundZero()                              | Fail        |
 | Range         | getUpperBound()            |                     | getUpperBoundFOrSameLowerAndUpperBounds()                     | Pass        |
-| Range         | getCentralValue()          |                     | testGetCentralValueForLowerBoundPositiveUpperBoundPositive()  | Pass        |
-| Range         | getCentralValue()          |                     | testGetCentralValueForLowerBoundZeroUpperBoundPositive()      | Pass        |
-| Range         | getCentralValue()          |                     | testGetCentralValueForLowerBoundNegativeUpperBoundPositive()  | Pass        |
-| Range         | getCentralValue()          |                     | testGetCentralValueForLowerBoundNegativeUpperBoundZero()      | Pass        |
-| Range         | getCentralValue()          |                     | testGetCentralValueForLowerBoundNegativeUpperBoundNegative()  | Pass        |
-| Range         | getCentralValue()          |                     | testGetCentralValueForRangeOfLengthZero()                     | Pass        |
-| Range         | contains()                 |                     | testContainsAboveUpperBoundOfRange()                          | Pass        |
-| Range         | contains()                 |                     | testContainsAtUpperBoundOfRange()                             | Pass        |
-| Range         | contains()                 |                     | testContainsBelowUpperBoundOfRange()                          | Pass        |
-| Range         | contains()                 |                     | testContainsForNominalValue()                                 | Pass        |
-| Range         | contains()                 |                     | testContainsAboveLowerBoundOfRange()                          | Pass        |
-| Range         | contains()                 |                     | testContainsAtLowerBoundOfRange()                             | Pass        |
-| Range         | contains()                 |                     | testContainsBelowLowerBoundOfRange()                          | Pass        |
-
-
+| Range         | getCentralValue()          | 2a                  | testGetCentralValueForLowerBoundPositiveUpperBoundPositive()  | Pass        |
+| Range         | getCentralValue()          | 2b                  | testGetCentralValueForLowerBoundZeroUpperBoundPositive()      | Pass        |
+| Range         | getCentralValue()          | 2c                  | testGetCentralValueForLowerBoundNegativeUpperBoundPositive()  | Pass        |
+| Range         | getCentralValue()          | 2d                  | testGetCentralValueForLowerBoundNegativeUpperBoundZero()      | Pass        |
+| Range         | getCentralValue()          | 2e                  | testGetCentralValueForLowerBoundNegativeUpperBoundNegative()  | Pass        |
+| Range         | getCentralValue()          | 2f                  | testGetCentralValueForRangeOfLengthZero()                     | Pass        |
+| Range         | contains()                 | 1a                  | testContainsAboveUpperBoundOfRange()                          | Pass        |
+| Range         | contains()                 | 1b                  | testContainsAtUpperBoundOfRange()                             | Pass        |
+| Range         | contains()                 | 1c                  | testContainsBelowUpperBoundOfRange()                          | Pass        |
+| Range         | contains()                 | 1d                  | testContainsForNominalValue()                                 | Pass        |
+| Range         | contains()                 | 1e                  | testContainsAboveLowerBoundOfRange()                          | Pass        |
+| Range         | contains()                 | 1f                  | testContainsAtLowerBoundOfRange()                             | Pass        |
+| Range         | contains()                 | 1g                  | testContainsBelowLowerBoundOfRange()                          | Pass        |
 
 
 
