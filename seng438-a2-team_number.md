@@ -108,7 +108,7 @@ Range Methods:
 # 3 Test cases developed
 
 | Class         | Method                     | Partition           | Test Case                                                     | Pass/Fail   |
-|---------------| ---------------------------|---------------------|---------------------------------------------------            |-------------|
+|---------------| ---------------------------|---------------------|---------------------------------------------------------------|-------------|
 | DataUtilities | calculateColumnTotal()     | 1.e                 | calculateColumnTotalForInvalidColumn()                        | Pass        |
 | DataUtilities | calculateColumnTotal()     | 1.d                 | calculateColumnTotalForNoValues()                             | Pass        |
 | DataUtilities | calculateColumnTotal()     | 1.c                 | calculateColumnTotalForOneValue()                             | Pass        |
@@ -123,11 +123,11 @@ Range Methods:
 | DataUtilties  | createNumberArray()        | 3.b                 | createNumberArrayForEmptyArray()                              | Pass        |
 | DataUtilties  | createNumberArray()        | 3.d                 | createNumberArrayForNominalArray()                            | Fail        | 
 | DataUtilties  | createNumberArray()        | 3.a                 | testCreateNumberArrayWithNullInput()                          | Fail        |
-| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2D()                                     | Fail        |
-| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DEmptyArray()                           | Pass        | 
-| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DNegativeValuesOneArray()               | Fail        | 
-| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DPositiveValues()                       | Fail        |
-| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DPositiveValuesAndEmptyArray()          | Fail        |
+| DataUtilties  | createNumberArray2D()      | 4.a                 | testCreateNumberArray2D()                                     | Fail        |
+| DataUtilties  | createNumberArray2D()      | 4.b                 | testCreateNumberArray2DEmptyArray()                           | Pass        | 
+| DataUtilties  | createNumberArray2D()      | 4.c                 | testCreateNumberArray2DNegativeValuesOneArray()               | Fail        | 
+| DataUtilties  | createNumberArray2D()      | 4.d                 | testCreateNumberArray2DPositiveValues()                       | Fail        |
+| DataUtilties  | createNumberArray2D()      | 4.e                 | testCreateNumberArray2DPositiveValuesAndEmptyArray()          | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.a                 | getCumulativePercentagesTestForValidValues()                  | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.b                 | getCumulativePercentagesTestForOneValue()                     | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.c                 | getCumulativePercentagesTestForException()                    | Fail        |
