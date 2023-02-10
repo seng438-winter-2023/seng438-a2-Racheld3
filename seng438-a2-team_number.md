@@ -112,9 +112,9 @@ After reading the lab handout and confirming that everyone had a general underst
 
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
-One of the big difficulties we ran into at first was getting all the members of the group to be able to work on the same git repository at the same time. This was resolved by 
+One of the big difficulties we ran into at first was getting all the members of the group to be able to work on the same git repository at the same time. We faced merge conflicts since we were using external .jar libraries, and the file paths were different on each team member's computer. This was resolved by adding the .jar files in a lib folder in the same directory as the src and bin folders in Eclipse. We then added the .jar files as internal libraries, which solved the issue. We now know how to properly set up an eclipse project with gitHub. 
 
-Our group as well had a different time understanding how to start the mocking. 
+We also struggled with learning how to use mocks at first. After going through the examples in detail, every team member felt comfortable using mocking. 
 
 # 6 Comments/feedback on the lab itself
 Our group found it diffuclt as mentioned above to understand mocking. We feel as though our group would have benefited with more clear instructions and clarification on how the mocking can be done. As well, we feel that we would have benefited if it was made clear that some of our tests would fail no matter what as we were under the impression that there would be no bugs to be found in the code.
