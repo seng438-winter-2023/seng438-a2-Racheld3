@@ -11,8 +11,8 @@
 |--------------------------------------|
 
 # 1 Introduction
+In this lab our group was able to apply the different concepts and practices we covered in lectures. We had to use both Junit, Javadoc, and Eclipse to test the given system JFreeChart. Junit was used to create a testing environment which used mock testing and test cases. We were able to demonstrate the creation of unit tests and using mock objects within our unit test code.
 
-Text…
 
 # 2 Detailed description of unit test strategy
 
@@ -29,10 +29,19 @@ An example of the following could be seen when partitioning inputs for testing R
     3. Negative valued lower bound and positive valued upper bound
     4. Negative valued lower bound and zero upper bound
     5. Negative valued lower bound and negative valued upper bound
+    **ask if these partitions are good or if we should separate them between range and DataUtilities
 
 Additionally, a final sixth test case was created to test a range with a length of zero (ie, lower bound value = upper bound value).
 
 # 3 Test cases developed
+
+| Class             | Method             | Partition             | Test Case                                        | Pass/Fail             |
+|-------------------| -------------------|-----------------------|--------------------------------------------------|-----------------------|
+| Range             |calculateColumnTotal|1                       | calculateColumnTotalForTwoValuesFirstColumn      | Pass                  | 
+| Range             |  
+| Range             |
+| Range             |
+|-------------------| -------------------|-----------------------|------------------------------|-----------------------|
 
 Text…
 
@@ -41,13 +50,13 @@ the source code method // they test. identify which tests cover which partitions
 you have explained in the test strategy section //above
 
 # 4 How the team work/effort was divided and managed
+After reading the lab handout and confirming that everyone had a general understanding of how the program works, expected unit testing, and mock testing, we split the tests up between the group members. All team members did help eachother through on zoom.
 
-Text…
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
+One of the big difficulties we ran into at first was getting all the members of the group to be able to work on the same git repository at the same time. This was resolved by
 
-Text…
+Our group as well had a different time understanding how to start the mocking. 
 
 # 6 Comments/feedback on the lab itself
-
-Text…
+Our group found it diffuclt as mentioned above to understand mocking. We feel as though our group would have benefited with more clear instructions and clarification on how the mocking can be done. 
