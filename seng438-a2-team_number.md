@@ -3,11 +3,12 @@
 **Lab. Report \#2 – Requirements-Based Test Generation**
 
 | Group: Group Number 10
-|-----------------|
-| Student 1: Rachel Dalton  
-| Student 2: Ana Clara Perrone   
-| Student 3: Saina Ghasemian-Roudsari
-| Student 4: Isaiah Lemieux   
+|--------------------------------------|
+| Student 1: Rachel Dalton             |  
+| Student 2: Ana Clara Perrone         |  
+| Student 3: Saina Ghasemian-Roudsari  |
+| Student 4: Isaiah Lemieux            |
+|--------------------------------------|
 
 # 1 Introduction
 
