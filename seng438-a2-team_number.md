@@ -8,7 +8,6 @@
 | Student 2: Ana Clara Perrone         |  
 | Student 3: Saina Ghasemian-Roudsari  |
 | Student 4: Isaiah Lemieux            |
-|--------------------------------------|
 
 # 1 Introduction
 In this lab our group was able to apply the different concepts and practices we covered in lectures. We had to use both Junit, Javadoc, and Eclipse to test the given system JFreeChart. Junit was used to create a testing environment which used mock testing and test cases. We were able to demonstrate the creation of unit tests and using mock objects within our unit test code.
