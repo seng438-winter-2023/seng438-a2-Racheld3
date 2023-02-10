@@ -73,6 +73,7 @@ Range Methods:
     c. a range with negative lower bound and positive upper bound
     d. a range with negative lower bound and zero as the upper bound
     e. a range with negative numbers for both the lower and upper bounds
+    f. a range with the same values for both upper and lower bound
 
 8. getUpperBound()
 
@@ -137,7 +138,7 @@ Range Methods:
 | Range         | getLength()                | 7.c                 | getLengthForNegativeLowerZeroUpper()                          | Pass        |
 | Range         | getLength()                | 7.d                 | getLengthForValidRange()                                      | Pass        |
 | Range         | getLength()                | 7.e                 | getLengthForZeroLowerPositiveUpper()                          | Pass        |
-| Range         | getLength()                |                     | getLengthForIdenticalLowerUpper()                             | Pass        |
+| Range         | getLength()                | 7.f                 | getLengthForIdenticalLowerUpper()                             | Pass        |
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundAboveZero()                         | Fail        |
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundBelowZero()                         | Fail        |
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundNegative()                          | Fail        |
