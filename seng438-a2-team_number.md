@@ -102,41 +102,41 @@ Range Methods:
 
 | Class         | Method                     | Partition           | Test Case                                                     | Pass/Fail   |
 |---------------| ---------------------------|---------------------|---------------------------------------------------            |-------------|
-| DataUtilities | calculateColumnTotal()     |         1.e         | calculateColumnTotalForInvalidColumn()                        | Pass        |
-| DataUtilities | calculateColumnTotal()     |         1.d         | calculateColumnTotalForNoValues()                             | Pass        |
-| DataUtilities | calculateColumnTotal()     |         1.c         | calculateColumnTotalForOneValue()                             | Pass        |
-| DataUtilities | calculateColumnTotal()     |         1.b         | calculateColumnTotalForThreeValuesLastColumn()                | Pass        |
-| DataUtilities | calculateColumnTotal()     |         1.a         | calculateColumnTotalForTwoValuesFirstColumn()                 | Pass        |
-| DataUtilties  | calculateRowTotal()        |         2.e         | calculateRowTotalForInvalidColumn()                           | Pass        | 
-| DataUtilties  | calculateRowTotal()        |         2.d         | calculateRowTotalForNoValues()                                | Pass        |  
-| DataUtilties  | calculateRowTotal()        |         2.c         | calculateRowTotalForOneValue()                                | Fail        |
-| DataUtilties  | calculateRowTotal()        |         2.b         | calculateRowTotalForThreeValuesLastRow()                      | Fail        | 
-| DataUtilties  | calculateRowTotal()        |         2.a         | calculateRowTotalForTwoValuesFirstRow()                       | Fail        |
-| DataUtilties  | createNumberArray()        |         3.c         | createNumberArrayForArrayOfLengthOne()                        | Fail        | 
-| DataUtilties  | createNumberArray()        |         3.b         | createNumberArrayForEmptyArray()                              | Pass        |
-| DataUtilties  | createNumberArray()        |         3.d         | createNumberArrayForNominalArray()                            | Fail        | 
-| DataUtilties  | createNumberArray()        |         3.a         | testCreateNumberArrayWithNullInput()                          | Fail        |
+| DataUtilities | calculateColumnTotal()     | 1.e                 | calculateColumnTotalForInvalidColumn()                        | Pass        |
+| DataUtilities | calculateColumnTotal()     | 1.d                 | calculateColumnTotalForNoValues()                             | Pass        |
+| DataUtilities | calculateColumnTotal()     | 1.c                 | calculateColumnTotalForOneValue()                             | Pass        |
+| DataUtilities | calculateColumnTotal()     | 1.b                 | calculateColumnTotalForThreeValuesLastColumn()                | Pass        |
+| DataUtilities | calculateColumnTotal()     | 1.a                 | calculateColumnTotalForTwoValuesFirstColumn()                 | Pass        |
+| DataUtilties  | calculateRowTotal()        | 2.e                 | calculateRowTotalForInvalidColumn()                           | Pass        | 
+| DataUtilties  | calculateRowTotal()        | 2.d                 | calculateRowTotalForNoValues()                                | Pass        |  
+| DataUtilties  | calculateRowTotal()        | 2.c                 | calculateRowTotalForOneValue()                                | Fail        |
+| DataUtilties  | calculateRowTotal()        | 2.b                 | calculateRowTotalForThreeValuesLastRow()                      | Fail        | 
+| DataUtilties  | calculateRowTotal()        | 2.a                 | calculateRowTotalForTwoValuesFirstRow()                       | Fail        |
+| DataUtilties  | createNumberArray()        | 3.c                 | createNumberArrayForArrayOfLengthOne()                        | Fail        | 
+| DataUtilties  | createNumberArray()        | 3.b                 | createNumberArrayForEmptyArray()                              | Pass        |
+| DataUtilties  | createNumberArray()        | 3.d                 | createNumberArrayForNominalArray()                            | Fail        | 
+| DataUtilties  | createNumberArray()        | 3.a                 | testCreateNumberArrayWithNullInput()                          | Fail        |
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2D()                                     | Fail        |
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DEmptyArray()                           | Pass        | 
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DNegativeValuesOneArray()               | Fail        | 
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DPositiveValues()                       | Fail        |
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DPositiveValuesAndEmptyArray()          | Fail
-| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForValidValues()                  | Fail        |
-| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneValue()                     | Fail        |
-| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForException()                    | Fail        |
-| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForNegativeValue()                | Fail        |
-| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneNegativeValue()             | Fail        |
+| DataUtilties  | getCumulativePercentages() | 5.a                 | getCumulativePercentagesTestForValidValues()                  | Fail        |
+| DataUtilties  | getCumulativePercentages() | 5.b                 | getCumulativePercentagesTestForOneValue()                     | Fail        |
+| DataUtilties  | getCumulativePercentages() | 5.c                 | getCumulativePercentagesTestForException()                    | Fail        |
+| DataUtilties  | getCumulativePercentages() | 5.d                 | getCumulativePercentagesTestForNegativeValue()                | Fail        |
+| DataUtilties  | getCumulativePercentages() | 5.e                 | getCumulativePercentagesTestForOneNegativeValue()             | Fail        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundPositive()                      | Pass        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundAboveZero()                     | Pass        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundZero()                          | Pass        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundBelowZero()                     | Pass        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundNegative()                      | Pass        |
 | Range         | getLowerBound()            |                     | testGetLowerBoundForSameLowerAndUpperBounds()                 | Pass        |
-| Range         | getLength()                |                     | getLengthForNegativeLowerNegativeUpper()                      | Pass        |
-| Range         | getLength()                |                     | getLengthForNegativeLowerPositiveUpper()                      | Pass        |
-| Range         | getLength()                |                     | getLengthForNegativeLowerZeroUpper()                          | Pass        |
-| Range         | getLength()                |                     | getLengthForValidRange()                                      | Pass        |
-| Range         | getLength()                |                     | getLengthForZeroLowerPositiveUpper()                          | Pass        |
+| Range         | getLength()                | 7.a                 | getLengthForNegativeLowerNegativeUpper()                      | Pass        |
+| Range         | getLength()                | 7.b                 | getLengthForNegativeLowerPositiveUpper()                      | Pass        |
+| Range         | getLength()                | 7.c                 | getLengthForNegativeLowerZeroUpper()                          | Pass        |
+| Range         | getLength()                | 7.d                 | getLengthForValidRange()                                      | Pass        |
+| Range         | getLength()                | 7.e                 | getLengthForZeroLowerPositiveUpper()                          | Pass        |
 | Range         | getLength()                |                     | getLengthForIdenticalLowerUpper()                             | Pass        |
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundAboveZero()                         | Fail        |
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundBelowZero()                         | Fail        |
@@ -144,19 +144,19 @@ Range Methods:
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundPositive()                          | Fail        |
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundZero()                              | Fail        |
 | Range         | getUpperBound()            |                     | getUpperBoundFOrSameLowerAndUpperBounds()                     | Pass        |
-| Range         | getCentralValue()          |                     | testGetCentralValueForLowerBoundPositiveUpperBoundPositive()  | Pass        |
-| Range         | getCentralValue()          | 2b                  | testGetCentralValueForLowerBoundZeroUpperBoundPositive()      | Pass        |
-| Range         | getCentralValue()          | 2c                  | testGetCentralValueForLowerBoundNegativeUpperBoundPositive()  | Pass        |
-| Range         | getCentralValue()          | 2d                  | testGetCentralValueForLowerBoundNegativeUpperBoundZero()      | Pass        |
-| Range         | getCentralValue()          | 2e                  | testGetCentralValueForLowerBoundNegativeUpperBoundNegative()  | Pass        |
-| Range         | getCentralValue()          | 2f                  | testGetCentralValueForRangeOfLengthZero()                     | Pass        |
-| Range         | contains()                 | 1a                  | testContainsAboveUpperBoundOfRange()                          | Pass        |
-| Range         | contains()                 | 1b                  | testContainsAtUpperBoundOfRange()                             | Pass        |
-| Range         | contains()                 | 1c                  | testContainsBelowUpperBoundOfRange()                          | Pass        |
-| Range         | contains()                 | 1d                  | testContainsForNominalValue()                                 | Pass        |
-| Range         | contains()                 | 1e                  | testContainsAboveLowerBoundOfRange()                          | Pass        |
-| Range         | contains()                 | 1f                  | testContainsAtLowerBoundOfRange()                             | Pass        |
-| Range         | contains()                 | 1g                  | testContainsBelowLowerBoundOfRange()                          | Pass        |
+| Range         | getCentralValue()          | 9.a                 | testGetCentralValueForLowerBoundPositiveUpperBoundPositive()  | Pass        |
+| Range         | getCentralValue()          | 9.b                 | testGetCentralValueForLowerBoundZeroUpperBoundPositive()      | Pass        |
+| Range         | getCentralValue()          | 9.c                 | testGetCentralValueForLowerBoundNegativeUpperBoundPositive()  | Pass        |
+| Range         | getCentralValue()          | 9.d                 | testGetCentralValueForLowerBoundNegativeUpperBoundZero()      | Pass        |
+| Range         | getCentralValue()          | 9.e                 | testGetCentralValueForLowerBoundNegativeUpperBoundNegative()  | Pass        |
+| Range         | getCentralValue()          | 9.f                 | testGetCentralValueForRangeOfLengthZero()                     | Pass        |
+| Range         | contains()                 | 10.a                | testContainsAboveUpperBoundOfRange()                          | Pass        |
+| Range         | contains()                 | 10.b                | testContainsAtUpperBoundOfRange()                             | Pass        |
+| Range         | contains()                 | 10.c                | testContainsBelowUpperBoundOfRange()                          | Pass        |
+| Range         | contains()                 | 10.d                | testContainsForNominalValue()                                 | Pass        |
+| Range         | contains()                 | 10.e                | testContainsAboveLowerBoundOfRange()                          | Pass        |
+| Range         | contains()                 | 10.f                | testContainsAtLowerBoundOfRange()                             | Pass        |
+| Range         | contains()                 | 10.g                | testContainsBelowLowerBoundOfRange()                          | Pass        |
 
 
 
