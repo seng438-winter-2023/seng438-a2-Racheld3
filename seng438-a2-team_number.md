@@ -28,42 +28,10 @@ An example of the following could be seen when partitioning inputs for testing R
     5. Negative valued lower bound and negative valued upper bound
 Additionally, a final sixth test case was created to test a range with a length of zero (ie, lower bound value = upper bound value).
 
-Input partitions for five chosen Range methods:
-1. contains(double value)
-    a. any range of values (any value for each lower bound and upper bound), method input variable slightly greater than upper bound
-    b. any range of values, method input variable at upper bound
-    c. any range of values, method input variable slightly less than upper bound
-    d. any range of values, method input variable between upper bound and lower bound
-    e. any range of values, method input variable slightly greater than lower bound
-    f. any range of values, method input variable at lower bound
-    g. any range of values, method input variable slightly less than lower bound
+Input partitions:
 
-2. getCentralValue()
-    a. a range with positive value for lower bound, and a positive value for upper bound
-    b. a range with lower bound of zero, and a positive value for upper bound
-    c. a range with negative value for lower bound, and a positive value for upper bound
-    d. a range with negative value for lower bound, and upper bound of zero
-    e. a range with negative value for lower bound, and a negative value for upper bound
-    f. a range with length zero
+Data Utilities Methods
 
-3. getLength()
-    a. a range with positive numbers for both the lower and upper bounds, therefore, valid range
-    b. a range with the lower bound as zero and a positive upper bound
-    c. a range with negative lower bound and positive upper bound
-    d. a range with negative lower bound and zero as the upper bound
-    e. a range with negative numbers for both the lower and upper bounds
-
-
-4. getLowerBound()
-    a. a range with positive values for both
-    b. a range with the value of 0
-
-5. getUpperBound()
-
-
-
-
-Input partitions for Data Utilities methods:
 1. calculateColumnTotal(Values2D data, int column) 
     a. data with 1+ columns and rows, and the first column of the data
     b. data with 1+ columns and rows, and the last column of the data
@@ -92,6 +60,40 @@ Input partitions for Data Utilities methods:
     c. null data
     d. data table with two positive values and one negative value
     e. datable table with one negative value
+
+Range Methods:
+
+6. getLowerBound()
+    a. a range with positive values for both
+    b. a range with the value of 0
+
+7. getLength()
+    a. a range with positive numbers for both the lower and upper bounds, therefore, valid range
+    b. a range with the lower bound as zero and a positive upper bound
+    c. a range with negative lower bound and positive upper bound
+    d. a range with negative lower bound and zero as the upper bound
+    e. a range with negative numbers for both the lower and upper bounds
+
+8. getUpperBound()
+
+9. getCentralValue()
+    a. a range with positive value for lower bound, and a positive value for upper bound
+    b. a range with lower bound of zero, and a positive value for upper bound
+    c. a range with negative value for lower bound, and a positive value for upper bound
+    d. a range with negative value for lower bound, and upper bound of zero
+    e. a range with negative value for lower bound, and a negative value for upper bound
+    f. a range with length zero
+
+10. contains(double value)
+    a. any range of values (any value for each lower bound and upper bound), method input variable slightly greater than upper bound
+    b. any range of values, method input variable at upper bound
+    c. any range of values, method input variable slightly less than upper bound
+    d. any range of values, method input variable between upper bound and lower bound
+    e. any range of values, method input variable slightly greater than lower bound
+    f. any range of values, method input variable at lower bound
+    g. any range of values, method input variable slightly less than lower bound
+
+
 
 
 
@@ -142,7 +144,7 @@ Input partitions for Data Utilities methods:
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundPositive()                          | Fail        |
 | Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundZero()                              | Fail        |
 | Range         | getUpperBound()            |                     | getUpperBoundFOrSameLowerAndUpperBounds()                     | Pass        |
-| Range         | getCentralValue()          | 2a                  | testGetCentralValueForLowerBoundPositiveUpperBoundPositive()  | Pass        |
+| Range         | getCentralValue()          |                     | testGetCentralValueForLowerBoundPositiveUpperBoundPositive()  | Pass        |
 | Range         | getCentralValue()          | 2b                  | testGetCentralValueForLowerBoundZeroUpperBoundPositive()      | Pass        |
 | Range         | getCentralValue()          | 2c                  | testGetCentralValueForLowerBoundNegativeUpperBoundPositive()  | Pass        |
 | Range         | getCentralValue()          | 2d                  | testGetCentralValueForLowerBoundNegativeUpperBoundZero()      | Pass        |
