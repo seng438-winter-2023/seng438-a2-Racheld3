@@ -106,12 +106,11 @@ Input partitions for Data Utilities methods:
 | DataUtilties  | createNumberArray()        |         3.b         | createNumberArrayForEmptyArray()                              | Pass        |
 | DataUtilties  | createNumberArray()        |         3.d         | createNumberArrayForNominalArray()                            | Fail        | 
 | DataUtilties  | createNumberArray()        |         3.a         | testCreateNumberArrayWithNullInput()                          | Fail        |
-| DataUtilties  | createNumberArray2D()      |                     | 
-| DataUtilties  | createNumberArray2D()      |
-| DataUtilties  | createNumberArray2D()      |
-| DataUtilties  | createNumberArray2D()      |
-| DataUtilties  | createNumberArray2D()      |
-
+| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2D()                                     | Fail        |
+| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DEmptyArray()                           | Pass        | 
+| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DNegativeValuesOneArray()               | Fail        | 
+| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DPositiveValues()                       | Fail        |
+| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DPositiveValuesAndEmptyArray()          | Fail
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForValidValues()                  | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneValue()                     | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForException()                    | Fail        |
