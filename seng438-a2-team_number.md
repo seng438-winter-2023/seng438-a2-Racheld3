@@ -12,7 +12,6 @@
 # 1 Introduction
 In this lab our group was able to apply the different concepts and practices we covered in lectures. We had to use both Junit, Javadoc, and Eclipse to test the given system JFreeChart. Junit was used to create a testing environment which used mock testing and test cases. We were able to demonstrate the creation of unit tests and using mock objects within our unit test code.
 
-
 # 2 Detailed description of unit test strategy
 
 Our unit test strategy will begin with each team member individually and carefully going through the documentation of both of the classes to be tested: org.jfree.data.DataUtilities and org.jfree.data.Range. This will allow each one of us to gain an understanding of the functionality of the methods we will be testing inside these classes before creating our test suite. Once this step is done we will proceed to split up the tests between the group members to facilitate with the workload, however, we will make sure to reconvene and go through each other's tests to make sure we all have an understanding of all the tests.
@@ -67,8 +66,9 @@ Range Methods:
 
 6. getLowerBound()
     a. a range with positive values for both the lowet and upper bounds
-    b. a range with negative value for lower bound, and a positive value for the upper bound
-    c. a range with zero for the value for the lower bound, and a positive value for the upper bound
+    b. a range with zero for the value for the lower bound, and a positive value for the upper bound
+    c. a range with negative value for lower bound, and a positive value for the upper bound
+    d. a range with the lower and upper bounds being the same values
 
 7. getLength()
     a. a range with positive numbers for both the lower and upper bounds, therefore, valid range
@@ -84,7 +84,6 @@ Range Methods:
     c. a range with positive values for both the lower and upper bounds
     d. a range with negative value for lower bound, and a value of zero for the upper bound
     e. a range with the lower and upper bounds being the same values
-
 
 9. getCentralValue()
     a. a range with positive value for lower bound, and a positive value for upper bound
@@ -102,11 +101,6 @@ Range Methods:
     e. any range of values, method input variable slightly greater than lower bound
     f. any range of values, method input variable at lower bound
     g. any range of values, method input variable slightly less than lower bound
-
-
-
-
-
 
 # 3 Test cases developed
 
@@ -136,12 +130,12 @@ Range Methods:
 | DataUtilties  | getCumulativePercentages() | 5.c                 | getCumulativePercentagesTestForException()                    | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.d                 | getCumulativePercentagesTestForNegativeValue()                | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.e                 | getCumulativePercentagesTestForOneNegativeValue()             | Fail        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundPositive()                      | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundAboveZero()                     | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundZero()                          | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundBelowZero()                     | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForLowerBoundNegative()                      | Pass        |
-| Range         | getLowerBound()            |                     | testGetLowerBoundForSameLowerAndUpperBounds()                 | Pass        |
+| Range         | getLowerBound()            | 6.a                 | testGetLowerBoundForLowerBoundPositive()                      | Pass        |
+| Range         | getLowerBound()            | 6.a                 | testGetLowerBoundForLowerBoundAboveZero()                     | Pass        |
+| Range         | getLowerBound()            | 6.b                 | testGetLowerBoundForLowerBoundZero()                          | Pass        |
+| Range         | getLowerBound()            | 6.c                 | testGetLowerBoundForLowerBoundBelowZero()                     | Pass        |
+| Range         | getLowerBound()            | 6.c                 | testGetLowerBoundForLowerBoundNegative()                      | Pass        |
+| Range         | getLowerBound()            | 6.d                 | testGetLowerBoundForSameLowerAndUpperBounds()                 | Pass        |
 | Range         | getLength()                | 7.a                 | getLengthForNegativeLowerNegativeUpper()                      | Pass        |
 | Range         | getLength()                | 7.b                 | getLengthForNegativeLowerPositiveUpper()                      | Pass        |
 | Range         | getLength()                | 7.c                 | getLengthForNegativeLowerZeroUpper()                          | Pass        |
@@ -168,11 +162,8 @@ Range Methods:
 | Range         | contains()                 | 10.f                | testContainsAtLowerBoundOfRange()                             | Pass        |
 | Range         | contains()                 | 10.g                | testContainsBelowLowerBoundOfRange()                          | Pass        |
 
-
-
 # 4 How the team work/effort was divided and managed
 After reading the lab handout and confirming that everyone had a general understanding of how the program works, expected unit testing, and mock testing, we split the tests up between the group members. Methods that would require the use of Mocking were divided between members of the group, so we could all learn and practice the technique. After deciding which members would examine and test each of the methods to be tested, the remaining work was performed alone. Each member would perform a combination of ECT and BVT on each of the methods assigned to them. This would involve finding the acceptable domain of each method and identifying equivalence classes. During the initial portions of writing tests that involve mocking, group members worked together on a zoom call to understand mocking interfaces.
-
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
 One of the big difficulties we ran into at first was getting all the members of the group to be able to work on the same git repository at the same time. We faced merge conflicts since we were using external .jar libraries, and the file paths were different on each team member's computer. This was resolved by adding the .jar files in a lib folder in the same directory as the src and bin folders in Eclipse. We then added the .jar files as internal libraries, which solved the issue. We now know how to properly set up an eclipse project with gitHub. 
