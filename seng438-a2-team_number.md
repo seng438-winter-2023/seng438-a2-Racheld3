@@ -53,6 +53,8 @@ Data Utilities Methods
     d. data of length > 1
 
 4. createNumberArray2D(double[][] data)
+    a. null data
+    b. 
 
 5. getCumulativePercentages(KeyedValues data) 
     a. data table with three positive values
