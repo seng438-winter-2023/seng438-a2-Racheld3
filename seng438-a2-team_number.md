@@ -56,10 +56,20 @@ Input partitions for Data Utilities:
 | DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForOneValue()                    | Fail        |
 | DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForThreeValuesLastRow()          | Fail        | 
 | DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForTwoValuesFirstRow()           | Fail        |
-
-
 | DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |
+
+
 | DataUtilties  | createNumberArray2D()      |
+| DataUtilties  | createNumberArray2D()      |
+| DataUtilties  | createNumberArray2D()      |
+| DataUtilties  | createNumberArray2D()      |
+| DataUtilties  | createNumberArray2D()      |
+
+
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForValidValues()      | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneValue()         | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForException()        | Fail        |
