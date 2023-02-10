@@ -28,13 +28,28 @@ An example of the following could be seen when partitioning inputs for testing R
     5. Negative valued lower bound and negative valued upper bound
 Additionally, a final sixth test case was created to test a range with a length of zero (ie, lower bound value = upper bound value).
 
-Input partitions for Range:
+Input partitions for five chosen Range methods:
+1. contains(double value)
+
+
+2. getCentralValue()
+
+3. getLength()
+    a. a range with positive numbers, is valid
+    b. 
+    c. 
+
+
+4. getLowerBound()
+
+5. getUpperBound()
 
 
 
-Input partitions for Data Utilities:
+
+Input partitions for Data Utilities methods:
 1. calculateColumnTotal(Values2D data, int column) 
-    a. Positive integer or negative integer values in data, EXPLAIN WHEN ITS VALID(PASS)/INVALID
+    a. Positive integer or negative integer values in data, 
     b. Null in 
     c. 
 
@@ -54,7 +69,7 @@ Input partitions for Data Utilities:
 
 # 3 Test cases developed
 
-| Class         | Method                     | Partition           | Test Case                                         | Pass/Fail   |
+| Class         | Test Method                | Partition           | Test Case                                         | Pass/Fail   |
 |---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
 | DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForInvalidColumn()            | Pass        |
 | DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForNoValues()                 | Pass        |
@@ -71,8 +86,6 @@ Input partitions for Data Utilities:
 | DataUtilties  | createNumberArray()        |
 | DataUtilties  | createNumberArray()        |
 | DataUtilties  | createNumberArray()        |
-
-
 | DataUtilties  | createNumberArray2D()      |
 | DataUtilties  | createNumberArray2D()      |
 | DataUtilties  | createNumberArray2D()      |
