@@ -8,7 +8,6 @@
 | Student 2: Ana Clara Perrone         |  
 | Student 3: Saina Ghasemian-Roudsari  |
 | Student 4: Isaiah Lemieux            |
-|--------------------------------------|
 
 # 1 Introduction
 In this lab our group was able to apply the different concepts and practices we covered in lectures. We had to use both Junit, Javadoc, and Eclipse to test the given system JFreeChart. Junit was used to create a testing environment which used mock testing and test cases. We were able to demonstrate the creation of unit tests and using mock objects within our unit test code.
@@ -17,8 +16,6 @@ In this lab our group was able to apply the different concepts and practices we 
 # 2 Detailed description of unit test strategy
 
 Our unit test strategy will begin with each team member individually and carefully going through the documentation of both of the classes to be tested: org.jfree.data.DataUtilities and org.jfree.data.Range. This will allow each one of us to gain an understanding of the functionality of the methods we will be testing inside these classes before creating our test suite. Once this step is done we will proceed to split up the tests between the group members to facilitate with the workload, however, we will make sure to reconvene and go through each other's tests to make sure we all have an understanding of all the tests.
-
-// including the input partitions you have designed
 
 When designing input partitions, our group first took an equivalence class testing approach, then applying boundary value testing to this. For each SUT, we went through documentation for each method we were meant to test. This gave us a better understanding of what each method is meant to do, and more importantly, specification of the domain of appropriate inputs for each method, if there were any input restrictions. Following the identification of these domains for each method, we then split the domain into appropriate equivalence classes, if it could be divided further. The creation of these classes would create boundaries that we would later have to consider in the test creation phase. Once a nominal value for each input was chosen to use in the test of a method, we then considered these boundaries recently created, and considered more possible inputs for testing. More specifically, we chose an input for both upper bound, lower bound, below upper bound, and above lower bound. Values that extend past the domain of each parameter were not considered as we were only concerned with valid inputs, which would improve efficiency of test writing.
 
@@ -29,19 +26,80 @@ An example of the following could be seen when partitioning inputs for testing R
     3. Negative valued lower bound and positive valued upper bound
     4. Negative valued lower bound and zero upper bound
     5. Negative valued lower bound and negative valued upper bound
-    **ask if these partitions are good or if we should separate them between range and DataUtilities
-
 Additionally, a final sixth test case was created to test a range with a length of zero (ie, lower bound value = upper bound value).
+
+Input partitions for Range:
+
+
+
+Input partitions for Data Utilities:
+1. calculateColumnTotal(Values2D data, int column) 
+    a. Positive integer or negative integer values in data, EXPLAIN WHEN ITS VALID(PASS)/INVALID
+    b. Null in 
+    c. 
+
+2. calculateRowTotal(Values2D data, int row) 
+    a.
+    b.
+
+
+3. createNumberArray(double[] data) 
+
+4. createNumberArray2D(double[][] data)
+
+5. getCumulativePercentages(KeyedValues data) 
+
+
+
 
 # 3 Test cases developed
 
-| Class             | Method             | Partition             | Test Case                                        | Pass/Fail             |
-|-------------------| -------------------|-----------------------|--------------------------------------------------|-----------------------|
-| Range             |calculateColumnTotal|1                       | calculateColumnTotalForTwoValuesFirstColumn      | Pass                  | 
-| Range             |  
-| Range             |
-| Range             |
-|-------------------| -------------------|-----------------------|------------------------------|-----------------------|
+| Class         | Method                     | Partition           | Test Case                                         | Pass/Fail   |
+|---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForInvalidColumn()            | Pass        |
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForNoValues()                 | Pass        |
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForOneValue()                 | Pass        |
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForThreeValuesLastColumn()    | Pass        |
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForTwoValuesFirstColumn()     | Pass        |
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForInvalidColumn()               | Pass        | 
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForNoValues()                    | Pass        |  
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForOneValue()                    | Fail        |
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForThreeValuesLastRow()          | Fail        | 
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForTwoValuesFirstRow()           | Fail        |
+| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray()        |
+
+
+| DataUtilties  | createNumberArray2D()      |
+| DataUtilties  | createNumberArray2D()      |
+| DataUtilties  | createNumberArray2D()      |
+| DataUtilties  | createNumberArray2D()      |
+| DataUtilties  | createNumberArray2D()      |
+
+
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForValidValues()      | Fail        |
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneValue()         | Fail        |
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForException()        | Fail        |
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForNegativeValue()    | Fail        |
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneNegativeValue() | Fail        |
+|---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
+| Range         | getLength()                |                     | getLengthForNegativeLowerNegativeUpper()          | Pass        |
+| Range         | getLength()                |                     | getLengthForNegativeLowerPositiveUpper()          | Pass        |
+| Range         | getLength()                |                     | getLengthForNegativeLowerZeroUpper()              | Pass        |
+| Range         | getLength()                |                     | getLengthForValidRange()                          | Pass        |
+| Range         | getLength()                |                     | getLengthForZeroLowerPositiveUpper()              | Pass        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundAboveZero()             | Fail        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundBelowZero()             | Fail        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundNegative()              | Fail        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundPositive()              | Fail        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundZero()                  | Fail        |
+| Range         |                            |                     |                                                   |             |
+
+
+
 
 Text…
 
@@ -50,13 +108,14 @@ the source code method // they test. identify which tests cover which partitions
 you have explained in the test strategy section //above
 
 # 4 How the team work/effort was divided and managed
-After reading the lab handout and confirming that everyone had a general understanding of how the program works, expected unit testing, and mock testing, we split the tests up between the group members. All team members did help eachother through on zoom.
+After reading the lab handout and confirming that everyone had a general understanding of how the program works, expected unit testing, and mock testing, we split the tests up between the group members. All team members did help eachother through on zoom. 
 
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
-One of the big difficulties we ran into at first was getting all the members of the group to be able to work on the same git repository at the same time. This was resolved by
+One of the big difficulties we ran into at first was getting all the members of the group to be able to work on the same git repository at the same time. This was resolved by 
 
 Our group as well had a different time understanding how to start the mocking. 
 
 # 6 Comments/feedback on the lab itself
-Our group found it diffuclt as mentioned above to understand mocking. We feel as though our group would have benefited with more clear instructions and clarification on how the mocking can be done. As well, we feel that we would have benefited if it was made clear that some of our tests would fail no matter what as we were under the impression that there would be no informal or formal bug reports required, as there was supposed to have been no bugs.
+Our group found it diffuclt as mentioned above to understand mocking. We feel as though our group would have benefited with more clear instructions and clarification on how the mocking can be done. As well, we feel that we would have benefited if it was made clear that some of our tests would fail no matter what as we were under the impression that there would be no bugs to be found in the code.
+After some of the challenges we faced were overcome, this lab did help us in gaining a strong understanding of how to write effective unit tests to help determine bugs. As well as how using mocking objects are used in unit tests.

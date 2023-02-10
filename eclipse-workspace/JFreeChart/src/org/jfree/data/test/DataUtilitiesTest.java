@@ -297,6 +297,41 @@ public class DataUtilitiesTest extends DataUtilities {
 		assertArrayEquals(result, expectedResult);
 	}
 	
+	@Test
+	public void testCreateNumberArray2DNegativeValuesOneArray() {
+		double[][] testArray = {{-5.0, -7.75, -9333.51}};
+		
+		Number[][] result = createNumberArray2D(testArray);
+		
+		Number[][] expectedResult = {{-5.0, -7.75, -9333.51}};
+		
+		assertArrayEquals(result, expectedResult);
+	}
+	
+	@Test
+	public void testCreateNumberArray2DEmptyArray() {
+		double[][] testArray = {{}, {}};
+		
+		Number[][] result = createNumberArray2D(testArray);
+		
+		Number[][] expectedResult = {{}, {}};
+		
+		assertArrayEquals(result, expectedResult);
+		
+	}
+	
+	@Test
+	public void testCreateNumberArray2DPositiveValuesAndEmptyArray() {
+		double[][] testArray = {{}, {11.0, 1234.1234, 72.0}};
+		
+		Number[][] result = createNumberArray2D(testArray);
+		
+		Number[][] expectedResult = {{}, {11.0, 1234.1234, 72.0}};
+		
+		assertArrayEquals(result, expectedResult);
+		
+	}
+	
 	//tests for getCumulative Percentages
 	
 	@Test
