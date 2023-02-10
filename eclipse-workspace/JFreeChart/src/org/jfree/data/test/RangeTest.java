@@ -21,7 +21,7 @@ public class RangeTest{
 		double expectedResult = 2;
 		
 		//verify
-		assertEquals(result, expectedResult, 0.00001); //dunno how precise it needs to be
+		assertEquals(expectedResult, result, 0.00001); //dunno how precise it needs to be
 		
 	}
 	
@@ -35,7 +35,7 @@ public class RangeTest{
 		double expectedResult = 3;
 		
 		//verify
-		assertEquals(result, expectedResult, 0.00001); //dunno how precise it needs to be
+		assertEquals(expectedResult, result, 0.00001); //dunno how precise it needs to be
 		
 	}
 }
