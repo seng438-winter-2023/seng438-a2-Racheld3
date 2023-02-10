@@ -46,8 +46,18 @@ Input partitions for Data Utilities:
 
 | Class         | Method                     | Partition           | Test Case                                         | Pass/Fail   |
 |---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
-| DataUtilities | calculateColumnTotal()     |
-| DataUtilties  | calculateRowTotal()        |
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForInvalidColumn()            | Pass        |
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForNoValues()                 | Pass        |
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForOneValue()                 | Pass        |
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForThreeValuesLastColumn()    | Pass        |
+| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForTwoValuesFirstColumn()     | Pass        |
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForInvalidColumn()               | Pass        | 
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForNoValues()                    | Pass        |  
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForOneValue()                    | Fail        |
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForThreeValuesLastRow()          | Fail        | 
+| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForTwoValuesFirstRow()           | Fail        |
+
+
 | DataUtilties  | createNumberArray()        |
 | DataUtilties  | createNumberArray2D()      |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForValidValues()      | Fail        |
@@ -56,11 +66,27 @@ Input partitions for Data Utilities:
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForNegativeValue()    | Fail        |
 | DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneNegativeValue() | Fail        |
 |---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
+| Range         | getLength()                |                     | getLengthForNegativeLowerNegativeUpper()          | Pass        |
+| Range         | getLength()                |                     | getLengthForNegativeLowerPositiveUpper()          | Pass        |
+| Range         | getLength()                |                     | getLengthForNegativeLowerZeroUpper()              | Pass        |
+| Range         | getLength()                |                     | getLengthForValidRange()                          | Pass        |
+| Range         | getLength()                |                     | getLengthForZeroLowerPositiveUpper()              | Pass        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundAboveZero()             | Fail        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundBelowZero()             | Fail        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundNegative()              | Fail        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundPositive()              | Fail        |
+| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundZero()                  | Fail        |
 | Range         |                            |                     |                                                   |             |
-| Range         |                            |                     |                                                   |             |
-| Range         |                            |                     |                                                   |             |
-| Range         |                            |                     |                                                   |             |
-| Range         |                            |                     |                                                   |             |
+
+
+
+
+
+
+
+
+
+
 |---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
 
 Text…
