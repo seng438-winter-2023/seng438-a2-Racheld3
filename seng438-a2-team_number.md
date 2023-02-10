@@ -20,6 +20,18 @@ Our unit test strategy will begin with each team member individually and careful
 
 // including the input partitions you have designed
 
+When designing input partitions, our group first took an equivalence class testing approach, then applying boundary value testing to this. For each SUT, we went through documentation for each method we were meant to test. This gave us a better understanding of what each method is meant to do, and more importantly, specification of the domain of appropriate inputs for each method, if there were any input restrictions. Following the identification of these domains for each method, we then split the domain into appropriate equivalence classes, if it could be divided further. The creation of these classes would create boundaries that we would later have to consider in the test creation phase. Once a nominal value for each input was chosen to use in the test of a method, we then considered these boundaries recently created, and considered more possible inputs for testing. More specifically, we chose an input for both upper bound, lower bound, below upper bound, and above lower bound. Values that extend past the domain of each parameter were not considered as we were only concerned with valid inputs, which would improve efficiency of test writing.
+
+An example of the following could be seen when partitioning inputs for testing Range.getCentralValue(). We can see there are no input parameters for the method itself, as it is a getter. Instead we examine what each Range object is composed of, as this is the data that getCentralValue() will be accessing. Both upper and lower bounds in Range are represented by variables of type double. This could easily be grouped in as one large domain of real numbers, as the method does not specify a valid domain, however, in an attempt to test the system futher, we split this domain into two smaller domains; positive values and negative values. This creates a boundary at 0. After identifying these input partitions, five test cases were created. 
+
+    1. Positive valued lower bound and positive valued upper bound
+    2. Zero lower bound and positive valued upper bound
+    3. Negative valued lower bound and positive valued upper bound
+    4. Negative valued lower bound and zero upper bound
+    5. Negative valued lower bound and negative valued upper bound
+
+Additionally, a final sixth test case was created to test a range with a length of zero (ie, lower bound value = upper bound value).
+
 # 3 Test cases developed
 
 Text…
