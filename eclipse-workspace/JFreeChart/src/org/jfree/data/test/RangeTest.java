@@ -28,6 +28,7 @@ public class RangeTest{
 	//getUpperBound tests
 	
 	@Test
+	
 	public void getUpperBoundForValidRange() 
 	{
 		//setup
