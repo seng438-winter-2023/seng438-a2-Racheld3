@@ -24,4 +24,18 @@ public class RangeTest{
 		assertEquals(result, expectedResult, 0.00001); //dunno how precise it needs to be
 		
 	}
+	
+	//getUpperBound tests
+	@Test
+	public void getUpperBoundForValidRange() 
+	{
+		//setup
+		final Range testRange = new Range(2, 3);
+		double result = testRange.getUpperBound();
+		double expectedResult = 3;
+		
+		//verify
+		assertEquals(result, expectedResult, 0.00001); //dunno how precise it needs to be
+		
+	}
 }
