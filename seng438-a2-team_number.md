@@ -64,8 +64,9 @@ Data Utilities Methods
 Range Methods:
 
 6. getLowerBound()
-    a. a range with positive values for both
-    b. a range with the value of 0
+    a. a range with positive values for both the lowet and upper bounds
+    b. a range with negative value for lower bound, and a positive value for the upper bound
+    c. a range with zero for the value for the lower bound, and a positive value for the upper bound
 
 7. getLength()
     a. a range with positive numbers for both the lower and upper bounds, therefore, valid range
