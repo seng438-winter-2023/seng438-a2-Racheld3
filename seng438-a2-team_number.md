@@ -44,13 +44,24 @@ Input partitions for Data Utilities:
 
 # 3 Test cases developed
 
-| Class             | Method             | Partition             | Test Case                                        | Pass/Fail             |
-|-------------------| -------------------|-----------------------|--------------------------------------------------|-----------------------|
-| Range             |calculateColumnTotal|1                       | calculateColumnTotalForTwoValuesFirstColumn      | Pass                 | 
-| Range             |  
-| Range             |
-| Range             |
-|-------------------| -------------------|-----------------------|------------------------------|-----------------------|
+| Class         | Method                     | Partition           | Test Case                                         | Pass/Fail   |
+|---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
+| DataUtilities | calculateColumnTotal()     |
+| DataUtilties  | calculateRowTotal()        |
+| DataUtilties  | createNumberArray()        |
+| DataUtilties  | createNumberArray2D()      |
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForValidValues()      | Fail        |
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneValue()         | Fail        |
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForException()        | Fail        |
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForNegativeValue()    | Fail        |
+| DataUtilties  | getCumulativePercentages() |                     | getCumulativePercentagesTestForOneNegativeValue() | Fail        |
+|---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
+| Range         |                            |                     |                                                   |             |
+| Range         |                            |                     |                                                   |             |
+| Range         |                            |                     |                                                   |             |
+| Range         |                            |                     |                                                   |             |
+| Range         |                            |                     |                                                   |             |
+|---------------| ---------------------------|---------------------|---------------------------------------------------|-------------|
 
 Text…
 
