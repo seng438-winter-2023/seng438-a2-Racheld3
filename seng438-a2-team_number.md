@@ -61,13 +61,18 @@ Input partitions for five chosen Range methods:
 
 Input partitions for Data Utilities methods:
 1. calculateColumnTotal(Values2D data, int column) 
-    a. data with 0+ columns and rows, is valid
-    b. 
-    c. 
+    a. data with 1+ columns and rows, and the first column of the data
+    b. data with 1+ columns and rows, and the last column of the data
+    c. data with 1 column and row, and the only column of the data
+    d. data with no columns, and requesting the first column
+    e. data with 1 column and row, and requesting a negative column
 
 2. calculateRowTotal(Values2D data, int row) 
-    a.
-    b.
+    a. data with 1+ columns and rows, and the first row of the data
+    b. data with 1+ columns and rows, and the last row of the data
+    c. data with 1 column and row, and the only row of the data
+    d. data with no columns, and requesting the first row
+    e. data with 1 column and row, and requesting a negative row
 
 
 3. createNumberArray(double[] data) 
@@ -83,16 +88,16 @@ Input partitions for Data Utilities methods:
 
 | Class         | Method                     | Partition           | Test Case                                                     | Pass/Fail   |
 |---------------| ---------------------------|---------------------|---------------------------------------------------            |-------------|
-| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForInvalidColumn()                        | Pass        |
-| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForNoValues()                             | Pass        |
-| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForOneValue()                             | Pass        |
-| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForThreeValuesLastColumn()                | Pass        |
-| DataUtilities | calculateColumnTotal()     |                     | calculateColumnTotalForTwoValuesFirstColumn()                 | Pass        |
-| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForInvalidColumn()                           | Pass        | 
-| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForNoValues()                                | Pass        |  
-| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForOneValue()                                | Fail        |
-| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForThreeValuesLastRow()                      | Fail        | 
-| DataUtilties  | calculateRowTotal()        |                     | calculateRowTotalForTwoValuesFirstRow()                       | Fail        |
+| DataUtilities | calculateColumnTotal()     |         1.e         | calculateColumnTotalForInvalidColumn()                        | Pass        |
+| DataUtilities | calculateColumnTotal()     |         1.d         | calculateColumnTotalForNoValues()                             | Pass        |
+| DataUtilities | calculateColumnTotal()     |         1.c         | calculateColumnTotalForOneValue()                             | Pass        |
+| DataUtilities | calculateColumnTotal()     |         1.b         | calculateColumnTotalForThreeValuesLastColumn()                | Pass        |
+| DataUtilities | calculateColumnTotal()     |         1.a         | calculateColumnTotalForTwoValuesFirstColumn()                 | Pass        |
+| DataUtilties  | calculateRowTotal()        |         2.e         | calculateRowTotalForInvalidColumn()                           | Pass        | 
+| DataUtilties  | calculateRowTotal()        |         2.d         | calculateRowTotalForNoValues()                                | Pass        |  
+| DataUtilties  | calculateRowTotal()        |         2.c         | calculateRowTotalForOneValue()                                | Fail        |
+| DataUtilties  | calculateRowTotal()        |         2.b         | calculateRowTotalForThreeValuesLastRow()                      | Fail        | 
+| DataUtilties  | calculateRowTotal()        |         2.a         | calculateRowTotalForTwoValuesFirstRow()                       | Fail        |
 | DataUtilties  | createNumberArray()        |                     | createNumberArrayForArrayOfLengthOne()                        | Fail        | 
 | DataUtilties  | createNumberArray()        |                     | createNumberArrayForEmptyArray()                              | Pass        |
 | DataUtilties  | createNumberArray()        |                     | createNumberArrayForNominalArray()                            | Fail        | 
