@@ -76,6 +76,12 @@ Range Methods:
     e. a range with negative numbers for both the lower and upper bounds
 
 8. getUpperBound()
+    a. a range with negative value for lower bound, and a positive value for the upper bound
+    b. a range with negative values for both upper and lower bound
+    c. a range with positive values for both the lower and upper bounds
+    d. a range with negative value for lower bound, and a value of zero for the upper bound
+    e. a range with the lower and upper bounds being the same values
+
 
 9. getCentralValue()
     a. a range with positive value for lower bound, and a positive value for upper bound
