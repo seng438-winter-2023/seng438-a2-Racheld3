@@ -180,6 +180,23 @@ public class DataUtilitiesTest extends DataUtilities {
 		// tear-down: NONE in this test method
 	}
 	
+	@Test
+	public void createNumberArrayForNullArray() {
+		//setup
+		double[] testArray = null;
+		
+		//test
+		//verify
+		//assertThrows(DataUtilites.class, () -> {DataUtilities.createNumberArray(testArray); });
+		
+		// tear-down: NONE in this test method
+	}
+	
+	@Test(expected = InvalidParameterException.class)
+	public void testCreateNumberArray2D(){
+		double[][] testArray = null;
+		createNumberArray2D(testArray);
+	}
 	
 	@Test
 	public void testCreateNumberArray2DPositiveValues() {
@@ -229,7 +246,4 @@ public class DataUtilitiesTest extends DataUtilities {
 		assertEquals(expectedValues, result);
 		
 	}
-	
-	
-
 }
