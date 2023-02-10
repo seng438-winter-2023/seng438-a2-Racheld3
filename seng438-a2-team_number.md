@@ -47,9 +47,11 @@ Input partitions for five chosen Range methods:
     f. a range with length zero
 
 3. getLength()
-    a. a range with positive numbers, is valid
-    b. 
-    c. 
+    a. a range with positive numbers for both the lower and upper bounds, therefore, valid range
+    b. a range with the lower bound as zero and a positive upper bound
+    c. a range with negative lower bound and positive upper bound
+    d. a range with negative lower bound and zero as the upper bound
+    e. a range with negative numbers for both the lower and upper bounds
 
 
 4. getLowerBound()
@@ -84,6 +86,11 @@ Input partitions for Data Utilities methods:
 4. createNumberArray2D(double[][] data)
 
 5. getCumulativePercentages(KeyedValues data) 
+    a. data table with three positive values
+    b. data table with one positive table
+    c. null data
+    d. data table with two positive values and one negative value
+    e. datable table with one negative value
 
 
 
