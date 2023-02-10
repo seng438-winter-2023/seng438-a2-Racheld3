@@ -43,7 +43,7 @@ public class RangeTest{
 	@Test
 	public void getLengthForValidRange() 
 	{
-		final Range testRange = new Range(1, 10);
+		final Range testRange = new Range(1, 11);
 		double result = testRange.getLength();
 		double expectedResult = 10;
 		

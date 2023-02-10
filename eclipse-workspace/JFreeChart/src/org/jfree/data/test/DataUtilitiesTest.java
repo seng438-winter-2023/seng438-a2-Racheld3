@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.security.InvalidParameterException;
 
 import org.jfree.data.DataUtilities;
+import org.jfree.data.KeyedValues;
 import org.jfree.data.Values2D;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
@@ -92,6 +93,44 @@ public class DataUtilitiesTest extends DataUtilities {
 		Number[][] expectedResult = {{5.0, 7.75, 9333.51}, {523.6, 9.999, 2.0}, {11.0, 1234.1234, 72.0}};
 		
 		assertArrayEquals(result, expectedResult);
+	}
+	
+	//tests for getCumulative Percentages
+	@Test
+	public void getCumulativePercentagesTest() {
+		Mockery mockingContext = new Mockery();
+		final KeyedValues inputValues = mockingContext.mock(KeyedValues.class);
+		mockingContext.checking(new Expectations() {
+			{
+				one(inputValues).getItemCount();
+				will(returnValue(3));
+				one(inputValues).getKey(0);
+				will(returnValue(5));
+				one(inputValues).getKey(1);
+				will(returnValue(9));
+				one(inputValues).getKey(2);
+				will(returnValue(3));
+				
+			}	
+		});
+		Mockery mockingContext1 = new Mockery();
+		final KeyedValues expectedValues = mockingContext1.mock(KeyedValues.class);
+		mockingContext1.checking(new Expectations() {
+			{
+				one(expectedValues).getItemCount();
+				will(returnValue(3));
+				one(expectedValues).getKey(0);
+				will(returnValue(5/16));
+				one(expectedValues).getKey(1);
+				will(returnValue(14/16));
+				one(expectedValues).getKey(2);
+				will(returnValue(16/16));
+				
+			}
+		});
+		KeyedValues result = DataUtilities.getCumulativePercentages(inputValues);
+		assertEquals(expectedValues, result);
+		
 	}
 	
 	
