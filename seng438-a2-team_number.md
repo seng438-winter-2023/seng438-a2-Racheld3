@@ -49,8 +49,8 @@ Input partitions for five chosen Range methods:
 
 Input partitions for Data Utilities methods:
 1. calculateColumnTotal(Values2D data, int column) 
-    a. Positive integer or negative integer values in data, 
-    b. Null in 
+    a. data with 0+ columns and rows, is valid
+    b. 
     c. 
 
 2. calculateRowTotal(Values2D data, int row) 
