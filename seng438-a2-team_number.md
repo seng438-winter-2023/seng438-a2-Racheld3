@@ -122,7 +122,7 @@ Range Methods:
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DEmptyArray()                           | Pass        | 
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DNegativeValuesOneArray()               | Fail        | 
 | DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DPositiveValues()                       | Fail        |
-| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DPositiveValuesAndEmptyArray()          | Fail
+| DataUtilties  | createNumberArray2D()      |                     | testCreateNumberArray2DPositiveValuesAndEmptyArray()          | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.a                 | getCumulativePercentagesTestForValidValues()                  | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.b                 | getCumulativePercentagesTestForOneValue()                     | Fail        |
 | DataUtilties  | getCumulativePercentages() | 5.c                 | getCumulativePercentagesTestForException()                    | Fail        |
@@ -140,12 +140,12 @@ Range Methods:
 | Range         | getLength()                | 7.d                 | getLengthForValidRange()                                      | Pass        |
 | Range         | getLength()                | 7.e                 | getLengthForZeroLowerPositiveUpper()                          | Pass        |
 | Range         | getLength()                | 7.f                 | getLengthForIdenticalLowerUpper()                             | Pass        |
-| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundAboveZero()                         | Fail        |
-| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundBelowZero()                         | Fail        |
-| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundNegative()                          | Fail        |
-| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundPositive()                          | Fail        |
-| Range         | getUpperBound()            |                     | getUpperBoundForUpperBoundZero()                              | Fail        |
-| Range         | getUpperBound()            |                     | getUpperBoundFOrSameLowerAndUpperBounds()                     | Pass        |
+| Range         | getUpperBound()            | 8.a                 | getUpperBoundForUpperBoundAboveZero()                         | Fail        |
+| Range         | getUpperBound()            | 8.b                 | getUpperBoundForUpperBoundBelowZero()                         | Fail        |
+| Range         | getUpperBound()            | 8.b                 | getUpperBoundForUpperBoundNegative()                          | Fail        |
+| Range         | getUpperBound()            | 8.c                 | getUpperBoundForUpperBoundPositive()                          | Fail        |
+| Range         | getUpperBound()            | 8.d                 | getUpperBoundForUpperBoundZero()                              | Fail        |
+| Range         | getUpperBound()            | 8.e                 | getUpperBoundForSameLowerAndUpperBounds()                     | Pass        |
 | Range         | getCentralValue()          | 9.a                 | testGetCentralValueForLowerBoundPositiveUpperBoundPositive()  | Pass        |
 | Range         | getCentralValue()          | 9.b                 | testGetCentralValueForLowerBoundZeroUpperBoundPositive()      | Pass        |
 | Range         | getCentralValue()          | 9.c                 | testGetCentralValueForLowerBoundNegativeUpperBoundPositive()  | Pass        |
